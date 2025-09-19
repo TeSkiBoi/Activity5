@@ -9,6 +9,13 @@
         :root {
             --apple-green: #4CAF50;
             --apple-green-dark: #388E3C;
+            --default: #ffff;
+
+            
+        }
+        #modal-logout {
+            background-color: var(--apple-green);
+            color: var(--default);
         }
         .hero-section {
             background: linear-gradient(rgba(76, 175, 80, 0.8), rgba(56, 142, 60, 0.9)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Marinduque_State_University_-_Main_Campus.jpg/1200px-Marinduque_State_University_-_Main_Campus.jpg');
@@ -58,9 +65,13 @@
                 <img src="assets/img/CICS LOGO-min.png" alt="CICS Logo" height="50" class="ms-2">
                 <b class="text-muted">College of Information and Computing Sciences</b>
             </a>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
@@ -68,13 +79,49 @@
                     <li class="nav-item"><a href="#programs" class="nav-link">Programs</a></li>
                     <li class="nav-item"><a href="#news" class="nav-link">News</a></li>
                     <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                    <li class="nav-item"><button class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button></li>
+
+
+
+                    <li class="nav-item">
+                        <button class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="bi bi-person-fill"></i> Login</button>
+                        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#krukkruk"><i class="bi bi-exclamation-triangle-fill"></i> Example</button>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+
+    
+    <!--THIS IS EXAMPLE MODAL-->
+        <div class="modal fade" id="krukkruk" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header" id="modal-logout">
+                        <h5 class="modal-title" id="logoutModalLabel">Confirm Logout</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure you want to logout?
+                        <form action="" method="post">
+                            <label for="">Example Required Trigger function</label>
+                            <input type="text" class="form-control" required placeholder="Enter Something">
+                            <br>
+                            <button type="submit" class="btn btn-primary"><i class="bi bi-check-circle"></i> Submit</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                        <a href="../index.html" class="btn btn-danger">Yes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--THIS IS THE END OF MODAL-->
+
+
     <!-- Hero Section -->
+     
     <section class="hero-section d-flex align-items-center">
         <div class="container text-center">
             <h1 class="display-2 fw-bold mb-4">Welcome to Marinduque State University</h1>
@@ -125,6 +172,8 @@
         </div>
     </section>
 
+    <hr>
+
     <!-- Programs Section -->
     <section id="programs" class="py-5 bg-light">
         <div class="container">
@@ -157,7 +206,7 @@
             </div>
         </div>
     </section>
-
+<hr>
     <!-- News Section -->
     <section id="news" class="py-5">
         <div class="container">
@@ -196,7 +245,7 @@
 
     <!-- Login Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog  modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header border-0 flex-column">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -207,6 +256,7 @@
                     </div>
                 </div>
                 <div class="modal-body px-4">
+
                     <form id="loginForm" class="needs-validation" novalidate>
                         <div class="mb-4">
                             <label for="username" class="form-label">Username</label>
@@ -231,8 +281,8 @@
                             </div>
                         </div>
                         <div class="mb-4 form-check">
-                            <input type="checkbox" class="form-check-input" id="rememberMe">
-                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                            <input type="checkbox" class="form-check-input" id="showPassword">
+                            <label class="form-check-label" for="showPassword">Show password</label>
                             <a href="#" class="float-end text-primary text-decoration-none">Forgot password?</a>
                         </div>
                         <div class="d-grid gap-2">
@@ -354,7 +404,54 @@
                 }
             </style>
         `);
+
+
+
+        // Show/hide password functionality
+        document.getElementById('showPassword').addEventListener('change', function() {
+            const passwordInput = document.getElementById('password');
+            if (this.checked) {
+                passwordInput.type = 'text';
+            } else {
+                passwordInput.type = 'password';
+            }
+        });
     </script>
+
+     <script>
+        // Log a simple string
+        console.log("Hello, world!");
+
+        // Log the value of a variable
+        const myVariable = "This is a variable.";
+        console.log(myVariable);
+
+        // Log an object
+        const myObject = { name: "Alice", age: 30 };
+        console.log(myObject.name);
+
+        // FUNCTIONS 
+        function exampleOutput(){
+            return "THIS IS MY FUNCTIONS";
+        }
+        console.log(exampleOutput());
+
+        //ADD TWO NUMBERS
+        function add(a, b) {
+            return a + b;
+        }
+        let num1 = 10;
+        let num2 = 20;
+        let result = add(num1, num2);
+        console.log(`The sum of ${num1} and ${num2} is ${result}`);
+        console.log("THE SUM OF " + num1 + " AND " + num2 + " IS " + result);
+
+
+        // function greet(name) {
+        //     return `Hello, ${name}!`;
+        // }
+    </script>
+
 
     <!-- Footer -->
     <footer class="bg-dark text-light py-5" id="contact">
