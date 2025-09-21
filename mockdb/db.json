@@ -1,0 +1,35 @@
+{
+    "students": [
+        {
+            "studentID": null,
+            "studentName": "",
+            "year": "",
+            "contact": "",
+            "course": null
+        }
+    ],
+    "faculty": [
+        {
+            "facultyID": null,
+            "facultyName": "",
+            "position": "",
+            "contact": "",
+            "department": null
+        }
+    ],
+    "course": [
+        {
+            "courseID": null,
+            "courseName": "",
+            "unit": null,
+            "students": null,
+            "department": null
+        }
+    ],
+    "department": [
+        {
+            "departmentID": null,
+            "departmentName": ""
+        }
+    ]
+}
