@@ -19,11 +19,32 @@
     ],
     "course": [
         {
-            "courseID": "",
-            "courseName": "",
-            "unit": null,
+            "courseID": "CS101",
+            "courseName": "Introduction to Computing",
+            "unit": 3,
+            "students": null,
+            "department": "DP001"
+        },
+        {
+            "courseID": "CS201",
+            "courseName": "Data Structures",
+            "unit": 3,
+            "students": null,
+            "department": "DP001"
+        },
+        {
+            "courseID": "IT205",
+            "courseName": "Web Development",
+            "unit": 3,
             "students": null,
             "department": ""
+        },
+        {
+            "courseID": "CS301",
+            "courseName": "Database Management",
+            "unit": 3,
+            "students": null,
+            "department": "DP001"
         }
     ],
     "department": [
