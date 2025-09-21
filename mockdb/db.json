@@ -28,8 +28,12 @@
     ],
     "department": [
         {
-            "departmentID": "",
-            "departmentName": ""
+            "departmentID": "DP001",
+            "departmentName": "Computer Science"
+        },
+        {
+            "departmentID": "DP002",
+            "departmentName": "Information Technology"
         }
     ]
 }
