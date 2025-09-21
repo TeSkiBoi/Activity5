@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +12,14 @@
             --apple-green-dark: #388E3C;
             --default: #ffff;
 
-            
+
         }
+
         #modal-logout {
             background-color: var(--apple-green);
             color: var(--default);
         }
+
         .hero-section {
             background: linear-gradient(rgba(76, 175, 80, 0.8), rgba(56, 142, 60, 0.9)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Marinduque_State_University_-_Main_Campus.jpg/1200px-Marinduque_State_University_-_Main_Campus.jpg');
             background-size: cover;
@@ -24,39 +27,49 @@
             height: 90vh;
             color: white;
         }
+
         .navbar {
             background-color: rgba(255, 255, 255, 0.95) !important;
         }
+
         .btn-primary {
             background-color: var(--apple-green) !important;
             border-color: var(--apple-green) !important;
         }
+
         .btn-primary:hover {
             background-color: var(--apple-green-dark) !important;
             border-color: var(--apple-green-dark) !important;
         }
+
         .btn-outline-light:hover {
             background-color: var(--apple-green) !important;
             border-color: var(--apple-green) !important;
         }
+
         .text-primary {
             color: var(--apple-green) !important;
         }
+
         .nav-link.active {
             color: var(--apple-green) !important;
         }
+
         .nav-link:hover {
             color: var(--apple-green) !important;
         }
+
         .card:hover {
             border-color: var(--apple-green);
             transition: border-color 0.3s ease;
         }
+
         footer {
             background-color: var(--apple-green-dark) !important;
         }
     </style>
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -65,7 +78,7 @@
                 <img src="assets/img/CICS LOGO-min.png" alt="CICS Logo" height="50" class="ms-2">
                 <b class="text-muted">College of Information and Computing Sciences</b>
             </a>
-            
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -83,8 +96,10 @@
 
 
                     <li class="nav-item">
-                        <button class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="bi bi-person-fill"></i> Login</button>
-                        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#krukkruk"><i class="bi bi-exclamation-triangle-fill"></i> Example</button>
+                        <button class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#loginModal"><i
+                                class="bi bi-person-fill"></i> Login</button>
+                        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#krukkruk"><i
+                                class="bi bi-exclamation-triangle-fill"></i> Example</button>
                     </li>
                 </ul>
             </div>
@@ -92,42 +107,43 @@
     </nav>
 
 
-    
+
     <!--THIS IS EXAMPLE MODAL-->
-        <div class="modal fade" id="krukkruk" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                    <div class="modal-header" id="modal-logout">
-                        <h5 class="modal-title" id="logoutModalLabel">Confirm Logout</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        Are you sure you want to logout?
-                        <form action="" method="post">
-                            <label for="">Example Required Trigger function</label>
-                            <input type="text" class="form-control" required placeholder="Enter Something">
-                            <br>
-                            <button type="submit" class="btn btn-primary"><i class="bi bi-check-circle"></i> Submit</button>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                        <a href="../index.html" class="btn btn-danger">Yes</a>
-                    </div>
+    <div class="modal fade" id="krukkruk" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header" id="modal-logout">
+                    <h5 class="modal-title" id="logoutModalLabel">Confirm Logout</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to logout?
+                    <form action="" method="post">
+                        <label for="">Example Required Trigger function</label>
+                        <input type="text" class="form-control" required placeholder="Enter Something">
+                        <br>
+                        <button type="submit" class="btn btn-primary"><i class="bi bi-check-circle"></i> Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                    <a href="../index.html" class="btn btn-danger">Yes</a>
                 </div>
             </div>
         </div>
+    </div>
     <!--THIS IS THE END OF MODAL-->
 
 
     <!-- Hero Section -->
-     
+
     <section class="hero-section d-flex align-items-center">
         <div class="container text-center">
             <h1 class="display-2 fw-bold mb-4">Welcome to Marinduque State University</h1>
             <p class="lead mb-4">Excellence, Innovation, and Service for Sustainable Development</p>
             <button class="btn btn-primary btn-lg me-3">Explore Programs</button>
-            <button class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#loginModal">Student Portal</button>
+            <button class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#loginModal">Student
+                Portal</button>
         </div>
     </section>
 
@@ -137,8 +153,10 @@
             <div class="row">
                 <div class="col-md-6">
                     <h2 class="mb-4">About MarSU</h2>
-                    <p class="lead">Marinduque State University is committed to providing quality education and fostering innovation in the heart of Marinduque.</p>
-                    <p>We strive to develop globally competitive graduates while preserving our cultural heritage and promoting sustainable development in our region.</p>
+                    <p class="lead">Marinduque State University is committed to providing quality education and
+                        fostering innovation in the heart of Marinduque.</p>
+                    <p>We strive to develop globally competitive graduates while preserving our cultural heritage and
+                        promoting sustainable development in our region.</p>
                 </div>
                 <div class="col-md-6">
                     <div class="row g-4">
@@ -183,7 +201,8 @@
                     <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title">College of Engineering</h5>
-                            <p class="card-text">Offering programs in Civil Engineering, Computer Engineering, and Electrical Engineering.</p>
+                            <p class="card-text">Offering programs in Civil Engineering, Computer Engineering, and
+                                Electrical Engineering.</p>
                         </div>
                     </div>
                 </div>
@@ -191,7 +210,8 @@
                     <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title">College of Education</h5>
-                            <p class="card-text">Programs in Elementary Education, Secondary Education, and Special Education.</p>
+                            <p class="card-text">Programs in Elementary Education, Secondary Education, and Special
+                                Education.</p>
                         </div>
                     </div>
                 </div>
@@ -199,14 +219,15 @@
                     <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title">College of Business</h5>
-                            <p class="card-text">Programs in Business Administration, Accountancy, and Tourism Management.</p>
+                            <p class="card-text">Programs in Business Administration, Accountancy, and Tourism
+                                Management.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-<hr>
+    <hr>
     <!-- News Section -->
     <section id="news" class="py-5">
         <div class="container">
@@ -281,8 +302,8 @@
                             </div>
                         </div>
                         <div class="mb-4 form-check">
-                            <input type="checkbox" class="form-check-input" id="showPassword">
-                            <label class="form-check-label" for="showPassword">Show password</label>
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember Me</label>
                             <a href="#" class="float-end text-primary text-decoration-none">Forgot password?</a>
                         </div>
                         <div class="d-grid gap-2">
@@ -294,7 +315,8 @@
                     </form>
                 </div>
                 <div class="modal-footer justify-content-center border-0 pt-0">
-                    <p class="text-muted">Don't have an account? <a href="#" class="text-primary text-decoration-none">Contact Admin</a></p>
+                    <p class="text-muted">Don't have an account? <a href="#"
+                            class="text-primary text-decoration-none">Contact Admin</a></p>
                 </div>
             </div>
         </div>
@@ -310,18 +332,18 @@
             input.addEventListener('focus', () => {
                 input.parentElement.classList.add('border-primary');
             });
-            
+
             input.addEventListener('blur', () => {
                 input.parentElement.classList.remove('border-primary');
             });
         });
 
         // Form validation and submission
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
             e.preventDefault();
             const form = e.target;
             const submitBtn = form.querySelector('button[type="submit"]');
-            
+
             if (!form.checkValidity()) {
                 e.stopPropagation();
                 form.classList.add('was-validated');
@@ -330,18 +352,18 @@
 
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
-            
+
             // Show loading state
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Signing in...';
-            
+
             // Simulate API call delay
             setTimeout(() => {
                 if (username === 'admin' && password === 'admin123') {
                     submitBtn.innerHTML = '<span class="me-2"><i class="bi bi-check-circle-fill"></i> Success!</span>';
                     submitBtn.classList.remove('btn-primary');
                     submitBtn.classList.add('btn-success');
-                    
+
                     setTimeout(() => {
                         window.location.href = 'admin/dashboard.html';
                     }, 1000);
@@ -349,13 +371,13 @@
                     submitBtn.innerHTML = '<span class="me-2"><i class="bi bi-exclamation-circle-fill"></i> Login Failed</span>';
                     submitBtn.classList.remove('btn-primary');
                     submitBtn.classList.add('btn-danger');
-                    
+
                     setTimeout(() => {
                         submitBtn.disabled = false;
                         submitBtn.classList.remove('btn-danger');
                         submitBtn.classList.add('btn-primary');
                         submitBtn.innerHTML = '<span class="me-2">Sign In</span><i class="bi bi-arrow-right"></i>';
-                        
+
                         // Show error message
                         const alert = document.createElement('div');
                         alert.className = 'alert alert-danger alert-dismissible fade show mt-3';
@@ -375,7 +397,7 @@
         loginModal.addEventListener('show.bs.modal', function () {
             this.querySelector('.modal-content').style.transform = 'scale(0.7)';
             this.querySelector('.modal-content').style.opacity = '0';
-            
+
             setTimeout(() => {
                 this.querySelector('.modal-content').style.transform = 'scale(1)';
                 this.querySelector('.modal-content').style.opacity = '1';
@@ -408,17 +430,17 @@
 
 
         // Show/hide password functionality
-        document.getElementById('showPassword').addEventListener('change', function() {
+        /*document.getElementById('showPassword').addEventListener('change', function() {
             const passwordInput = document.getElementById('password');
             if (this.checked) {
                 passwordInput.type = 'text';
             } else {
                 passwordInput.type = 'password';
             }
-        });
+        });*/
     </script>
 
-     <script>
+    <script>
         // Log a simple string
         console.log("Hello, world!");
 
@@ -431,7 +453,7 @@
         console.log(myObject.name);
 
         // FUNCTIONS 
-        function exampleOutput(){
+        function exampleOutput() {
             return "THIS IS MY FUNCTIONS";
         }
         console.log(exampleOutput());
@@ -460,8 +482,8 @@
                 <div class="col-md-4 mb-4">
                     <h5>Contact Us</h5>
                     <p>Tanza, Boac, Marinduque<br>
-                    Phone: (042) 332-2028<br>
-                    Email: info@marinduquestateu.edu.ph</p>
+                        Phone: (042) 332-2028<br>
+                        Email: info@marinduquestateu.edu.ph</p>
                 </div>
                 <div class="col-md-4 mb-4">
                     <h5>Quick Links</h5>
@@ -489,4 +511,5 @@
         </div>
     </footer>
 </body>
+
 </html>

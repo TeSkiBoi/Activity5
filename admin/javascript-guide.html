@@ -1,155 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="JavaScript Learning Guide" />
-        <meta name="author" content="Marinduque State University" />
-        <title>JavaScript Guide - MarSU Admin</title>
-        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-        <link href="../css/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-okaidia.min.css">
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <style>
-            :root {
-                --apple-green: #4CAF50;
-                --apple-green-dark: #388E3C;
-            }
-            
-            .sb-topnav {
-                background-color: var(--apple-green) !important;
-            }
-            .btn-primary {
-                background-color: var(--apple-green);
-                border-color: var(--apple-green);
-            }
-            .btn-primary:hover {
-                background-color: var(--apple-green-dark);
-                border-color: var(--apple-green-dark);
-            }
-            .card {
-                border: none;
-                box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
-                margin-bottom: 1rem;
-            }
-            .code-block {
-                background: #2d2d2d;
-                color: #cccccc;
-                padding: 1rem;
-                border-radius: 4px;
-                margin: 1rem 0;
-            }
-            .output-block {
-                background: #f8f9fa;
-                border: 1px solid #dee2e6;
-                padding: 1rem;
-                border-radius: 4px;
-                margin: 1rem 0;
-            }
-            .topic-section {
-                margin-bottom: 2rem;
-            }
-            .run-btn {
-                margin-top: 0.5rem;
-            }
-            .example-output {
-                display: none;
-                margin-top: 1rem;
-                padding: 1rem;
-                background: #f8f9fa;
-                border-radius: 4px;
-            }
-        </style>
-    </head>
-    <body class="sb-nav-fixed">
-        <nav class="sb-topnav navbar navbar-expand navbar-dark">
-            <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="../index.html">
-                <img src="../assets/img/MARSU LOGO.png" alt="MSU Logo" height="40" class="me-2">
-                MarSU Admin
-            </a>
-            <!-- Sidebar Toggle-->
-            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!">
-                <i class="fas fa-bars"></i>
-            </button>
-            <!-- Navbar-->
-            <ul class="navbar-nav ms-auto me-3 me-lg-4">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-user fa-fw"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Profile Settings</a></li>
-                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="../index.html">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                    <div class="sb-sidenav-menu">
-                        <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Main</div>
-                            <a class="nav-link" href="dashboard.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
-                            </a>
-                            <div class="sb-sidenav-menu-heading">Academic</div>
-                            <a class="nav-link" href="students.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-graduation-cap"></i></div>
-                                Students
-                            </a>
-                            <a class="nav-link" href="faculty.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                                Faculty
-                            </a>
-                            <a class="nav-link" href="courses.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>
-                                Courses
-                            </a>
-                            <div class="sb-sidenav-menu-heading">Learning</div>
-                            <a class="nav-link active" href="javascript-guide.html">
-                                <div class="sb-nav-link-icon"><i class="fab fa-js"></i></div>
-                                JavaScript Guide
-                            </a>
-                             <a class="nav-link active" href="javascript-playground.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-code"></i></div>
-                                JavaScript Playground
-                            </a>
-                        </div>
-                    </div>
-                    <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        Administrator
-                    </div>
-                </nav>
-            </div>
-            <div id="layoutSidenav_content">
-                <main>
-                    <div class="container-fluid px-4">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                                <h1 class="mt-4">JavaScript Guide</h1>
-                                <ol class="breadcrumb mb-4">
-                                    <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
-                                    <li class="breadcrumb-item active">JavaScript Guide</li>
-                                </ol>
-                            </div>
-                        </div>
 
-                        <!-- Basic JavaScript -->
-                        <div class="card topic-section">
-                            <div class="card-header">
-                                <h4 class="mb-0"><i class="fas fa-code me-2"></i>Basic JavaScript</h4>
-                            </div>
-                            <div class="card-body">
-                                <h5>1. Console Output</h5>
-                                <pre class="code-block"><code class="language-javascript">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="JavaScript Learning Guide" />
+    <meta name="author" content="Marinduque State University" />
+    <title>JavaScript Guide - MarSU Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-okaidia.min.css">
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --apple-green: #4CAF50;
+            --apple-green-dark: #388E3C;
+        }
+
+        .sb-topnav {
+            background-color: var(--apple-green) !important;
+        }
+
+        .btn-primary {
+            background-color: var(--apple-green);
+            border-color: var(--apple-green);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--apple-green-dark);
+            border-color: var(--apple-green-dark);
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+            margin-bottom: 1rem;
+        }
+
+        .code-block {
+            background: #2d2d2d;
+            color: #cccccc;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+
+        .output-block {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+
+        .topic-section {
+            margin-bottom: 2rem;
+        }
+
+        .run-btn {
+            margin-top: 0.5rem;
+        }
+
+        .example-output {
+            display: none;
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" href="../index.html">
+            <img src="../assets/img/MARSU LOGO.png" alt="MSU Logo" height="40" class="me-2">
+            MarSU Admin
+        </a>
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!">
+            <i class="fas fa-bars"></i>
+        </button>
+        <!-- Navbar-->
+        <ul class="navbar-nav ms-auto me-3 me-lg-4">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fas fa-user fa-fw"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#!">Profile Settings</a></li>
+                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li><a class="dropdown-item" href="../index.html">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading">Main</div>
+                        <a class="nav-link" href="dashboard.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Dashboard
+                        </a>
+                        <div class="sb-sidenav-menu-heading">Academic</div>
+                        <a class="nav-link" href="students.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-graduation-cap"></i></div>
+                            Students
+                        </a>
+                        <a class="nav-link" href="faculty.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                            Faculty
+                        </a>
+                        <a class="nav-link" href="courses.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>
+                            Courses
+                        </a>
+                        <div class="sb-sidenav-menu-heading">Learning</div>
+                        <a class="nav-link active" href="javascript-guide.html">
+                            <div class="sb-nav-link-icon"><i class="fab fa-js"></i></div>
+                            JavaScript Guide
+                        </a>
+                        <a class="nav-link active" href="javascript-playground.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-code"></i></div>
+                            JavaScript Playground
+                        </a>
+                        <div class="sb-sidenav-menu-heading">BSIS STUDENTS</div>
+                        <a class="nav-link" href="#">
+                            <div class="sb-nav-link-icon"><i class="fas fa-user-graduate"></i></div>
+                            Student Portal
+                        </a>
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer">
+                    <div class="small">Logged in as:</div>
+                    Administrator
+                </div>
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h1 class="mt-4">JavaScript Guide</h1>
+                            <ol class="breadcrumb mb-4">
+                                <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                                <li class="breadcrumb-item active">JavaScript Guide</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- Basic JavaScript -->
+                    <div class="card topic-section">
+                        <div class="card-header">
+                            <h4 class="mb-0"><i class="fas fa-code me-2"></i>Basic JavaScript</h4>
+                        </div>
+                        <div class="card-body">
+                            <h5>1. Console Output</h5>
+                            <pre class="code-block"><code class="language-javascript">
 // Basic console.log
 console.log("Hello, World!");
 
@@ -163,11 +181,11 @@ console.log("%cStyled text", "color: blue; font-size: 20px;");
 // Console table
 console.table(["apple", "banana", "orange"]);
                                 </code></pre>
-                                <button class="btn btn-primary run-btn" onclick="runConsoleExample()">Run Example</button>
-                                <div id="console-output" class="example-output"></div>
+                            <button class="btn btn-primary run-btn" onclick="runConsoleExample()">Run Example</button>
+                            <div id="console-output" class="example-output"></div>
 
-                                <h5 class="mt-4">2. Variables and Data Types</h5>
-                                <pre class="code-block"><code class="language-javascript">
+                            <h5 class="mt-4">2. Variables and Data Types</h5>
+                            <pre class="code-block"><code class="language-javascript">
 // Variable declarations
 let name = "John";           // String
 const age = 25;             // Number
@@ -181,19 +199,19 @@ let person = {              // Object
 // Template literals
 let greeting = `Hello, ${name}!`;
                                 </code></pre>
-                                <button class="btn btn-primary run-btn" onclick="runVariablesExample()">Run Example</button>
-                                <div id="variables-output" class="example-output"></div>
-                            </div>
+                            <button class="btn btn-primary run-btn" onclick="runVariablesExample()">Run Example</button>
+                            <div id="variables-output" class="example-output"></div>
                         </div>
+                    </div>
 
-                        <!-- Intermediate JavaScript -->
-                        <div class="card topic-section">
-                            <div class="card-header">
-                                <h4 class="mb-0"><i class="fas fa-code-branch me-2"></i>Intermediate JavaScript</h4>
-                            </div>
-                            <div class="card-body">
-                                <h5>1. Functions</h5>
-                                <pre class="code-block"><code class="language-javascript">
+                    <!-- Intermediate JavaScript -->
+                    <div class="card topic-section">
+                        <div class="card-header">
+                            <h4 class="mb-0"><i class="fas fa-code-branch me-2"></i>Intermediate JavaScript</h4>
+                        </div>
+                        <div class="card-body">
+                            <h5>1. Functions</h5>
+                            <pre class="code-block"><code class="language-javascript">
 // Regular function
 function greet(name) {
     return `Hello, ${name}!`;
@@ -213,11 +231,11 @@ function processUser(callback) {
     callback(user);
 }
                                 </code></pre>
-                                <button class="btn btn-primary run-btn" onclick="runFunctionsExample()">Run Example</button>
-                                <div id="functions-output" class="example-output"></div>
+                            <button class="btn btn-primary run-btn" onclick="runFunctionsExample()">Run Example</button>
+                            <div id="functions-output" class="example-output"></div>
 
-                                <h5 class="mt-4">2. Arrays and Methods</h5>
-                                <pre class="code-block"><code class="language-javascript">
+                            <h5 class="mt-4">2. Arrays and Methods</h5>
+                            <pre class="code-block"><code class="language-javascript">
 // Array methods
 let fruits = ['apple', 'banana', 'orange'];
 
@@ -234,19 +252,19 @@ let sum = numbers.reduce((acc, curr) => acc + curr, 0);
 // Find
 let found = fruits.find(fruit => fruit === 'banana');
                                 </code></pre>
-                                <button class="btn btn-primary run-btn" onclick="runArraysExample()">Run Example</button>
-                                <div id="arrays-output" class="example-output"></div>
-                            </div>
+                            <button class="btn btn-primary run-btn" onclick="runArraysExample()">Run Example</button>
+                            <div id="arrays-output" class="example-output"></div>
                         </div>
+                    </div>
 
-                        <!-- Advanced JavaScript -->
-                        <div class="card topic-section">
-                            <div class="card-header">
-                                <h4 class="mb-0"><i class="fas fa-laptop-code me-2"></i>Advanced JavaScript</h4>
-                            </div>
-                            <div class="card-body">
-                                <h5>1. Promises and Async/Await</h5>
-                                <pre class="code-block"><code class="language-javascript">
+                    <!-- Advanced JavaScript -->
+                    <div class="card topic-section">
+                        <div class="card-header">
+                            <h4 class="mb-0"><i class="fas fa-laptop-code me-2"></i>Advanced JavaScript</h4>
+                        </div>
+                        <div class="card-body">
+                            <h5>1. Promises and Async/Await</h5>
+                            <pre class="code-block"><code class="language-javascript">
 // Promise
 const fetchData = () => {
     return new Promise((resolve, reject) => {
@@ -266,11 +284,11 @@ async function getData() {
     }
 }
                                 </code></pre>
-                                <button class="btn btn-primary run-btn" onclick="runPromiseExample()">Run Example</button>
-                                <div id="promise-output" class="example-output"></div>
+                            <button class="btn btn-primary run-btn" onclick="runPromiseExample()">Run Example</button>
+                            <div id="promise-output" class="example-output"></div>
 
-                                <h5 class="mt-4">2. DOM Manipulation</h5>
-                                <pre class="code-block"><code class="language-javascript">
+                            <h5 class="mt-4">2. DOM Manipulation</h5>
+                            <pre class="code-block"><code class="language-javascript">
 // Selecting elements
 const element = document.querySelector('.class-name');
 const elements = document.querySelectorAll('.class-name');
@@ -290,128 +308,130 @@ const parent = element.parentNode;
 const children = element.children;
 const nextSibling = element.nextElementSibling;
                                 </code></pre>
-                                <button class="btn btn-primary run-btn" onclick="runDOMExample()">Run Example</button>
-                                <div id="dom-output" class="example-output"></div>
-                            </div>
+                            <button class="btn btn-primary run-btn" onclick="runDOMExample()">Run Example</button>
+                            <div id="dom-output" class="example-output"></div>
                         </div>
+                    </div>
 
-                    </div>
-                </main>
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Marinduque State University 2025</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
+                </div>
+            </main>
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Copyright &copy; Marinduque State University 2025</div>
+                        <div>
+                            <a href="#">Privacy Policy</a>
+                            &middot;
+                            <a href="#">Terms &amp; Conditions</a>
                         </div>
                     </div>
-                </footer>
-            </div>
+                </div>
+            </footer>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="../js/scripts.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-javascript.min.js"></script>
-        <script>
-            // Example runners
-            function showOutput(elementId, content) {
-                const output = document.getElementById(elementId);
-                output.style.display = 'block';
-                output.innerHTML = content;
-            }
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="../js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-javascript.min.js"></script>
+    <script>
+        // Example runners
+        function showOutput(elementId, content) {
+            const output = document.getElementById(elementId);
+            output.style.display = 'block';
+            output.innerHTML = content;
+        }
 
-            function runConsoleExample() {
-                let output = '';
-                console.log = function(message) {
-                    output += message + '<br>';
-                };
-                
-                console.log("Hello, World!");
-                let name = "John";
-                console.log("Name: " + name);
-                
-                showOutput('console-output', output);
-            }
+        function runConsoleExample() {
+            let output = '';
+            console.log = function (message) {
+                output += message + '<br>';
+            };
 
-            function runVariablesExample() {
-                let name = "John";
-                const age = 25;
-                var isStudent = true;
-                let scores = [95, 88, 76];
-                let person = {
-                    name: "John",
-                    age: 25
-                };
-                
-                let output = `
+            console.log("Hello, World!");
+            let name = "John";
+            console.log("Name: " + name);
+
+            showOutput('console-output', output);
+        }
+
+        function runVariablesExample() {
+            let name = "John";
+            const age = 25;
+            var isStudent = true;
+            let scores = [95, 88, 76];
+            let person = {
+                name: "John",
+                age: 25
+            };
+
+            let output = `
                     String: ${name}<br>
                     Number: ${age}<br>
                     Boolean: ${isStudent}<br>
                     Array: ${scores.join(', ')}<br>
                     Object: ${JSON.stringify(person)}
                 `;
-                
-                showOutput('variables-output', output);
+
+            showOutput('variables-output', output);
+        }
+
+        function runFunctionsExample() {
+            function greet(name) {
+                return `Hello, ${name}!`;
             }
 
-            function runFunctionsExample() {
-                function greet(name) {
-                    return `Hello, ${name}!`;
-                }
+            const multiply = (a, b) => a * b;
 
-                const multiply = (a, b) => a * b;
-
-                const output = `
+            const output = `
                     Regular function: ${greet('John')}<br>
                     Arrow function: 5 x 3 = ${multiply(5, 3)}
                 `;
-                
-                showOutput('functions-output', output);
-            }
 
-            function runArraysExample() {
-                let fruits = ['apple', 'banana', 'orange'];
-                let upperFruits = fruits.map(fruit => fruit.toUpperCase());
-                let longFruits = fruits.filter(fruit => fruit.length > 5);
-                
-                const output = `
+            showOutput('functions-output', output);
+        }
+
+        function runArraysExample() {
+            let fruits = ['apple', 'banana', 'orange'];
+            let upperFruits = fruits.map(fruit => fruit.toUpperCase());
+            let longFruits = fruits.filter(fruit => fruit.length > 5);
+
+            const output = `
                     Original array: ${fruits.join(', ')}<br>
                     Uppercase: ${upperFruits.join(', ')}<br>
                     Long fruits: ${longFruits.join(', ')}
                 `;
-                
-                showOutput('arrays-output', output);
-            }
 
-            function runPromiseExample() {
-                const output = document.getElementById('promise-output');
-                output.style.display = 'block';
-                output.innerHTML = 'Loading...';
-                
-                setTimeout(() => {
-                    output.innerHTML = 'Data fetched successfully!';
-                }, 2000);
-            }
+            showOutput('arrays-output', output);
+        }
 
-            function runDOMExample() {
-                const output = document.getElementById('dom-output');
-                output.style.display = 'block';
-                output.innerHTML = `
+        function runPromiseExample() {
+            const output = document.getElementById('promise-output');
+            output.style.display = 'block';
+            output.innerHTML = 'Loading...';
+
+            setTimeout(() => {
+                output.innerHTML = 'Data fetched successfully!';
+            }, 2000);
+        }
+
+        function runDOMExample() {
+            const output = document.getElementById('dom-output');
+            output.style.display = 'block';
+            output.innerHTML = `
                     <div id="demo-element" class="p-3 bg-warning">
                         Click me!
                     </div>
                 `;
-                
-                const demoElement = output.querySelector('#demo-element');
-                demoElement.addEventListener('click', () => {
-                    demoElement.style.backgroundColor = '#4CAF50';
-                    demoElement.style.color = 'white';
-                    demoElement.textContent = 'Clicked!';
-                });
-            }
-        </script>
-    </body>
+
+            const demoElement = output.querySelector('#demo-element');
+            demoElement.addEventListener('click', () => {
+                demoElement.style.backgroundColor = '#4CAF50';
+                demoElement.style.color = 'white';
+                demoElement.textContent = 'Clicked!';
+            });
+        }
+    </script>
+</body>
+
 </html>

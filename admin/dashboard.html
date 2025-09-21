@@ -1,113 +1,129 @@
 <div class="row"></div>
-    <div class="col-xl-12"></div>
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="MSU Admin Dashboard" />
-        <meta name="author" content="Marinduque State University" />
-        <title>MarSU Admin Dashboard</title>
-        <link href="../css/style.min.css" rel="stylesheet" />
-        <link href="../css/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="../css/bootstrap-icons.css">
-        <script src="../js/all.js" crossorigin="anonymous"></script>
-        <style>
-            :root {
-                --apple-green: #4CAF50;
-                --apple-green-dark: #388E3C;
+<div class="col-xl-12"></div>
 
-            }
-            
-            .sb-topnav {
-                background-color: var(--apple-green) !important;
-            }
-            .modal-title {
-                color: var(--apple-green);
-            }
-            .bg-primary {
-                background-color: var(--apple-green) !important;
-            }
-            .btn-primary {
-                background-color: var(--apple-green);
-                border-color: var(--apple-green);
-            }
-            .btn-primary:hover {
-                background-color: var(--apple-green-dark);
-                border-color: var(--apple-green-dark);
-            }
-            .sb-sidenav-dark .sb-sidenav-menu .nav-link:hover {
-                background-color: rgba(255, 255, 255, 0.1);
-            }
-            .card {
-                border: none;
-                box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
-            }
-            .card-header {
-                background-color: white;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.075);
-            }
-            .sb-nav-fixed #layoutSidenav #layoutSidenav_nav {
-                box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
-            }
-        </style>
-    </head>
-    <body class="sb-nav-fixed">
-        <nav class="sb-topnav navbar navbar-expand navbar-dark">
-            <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="../index.html">
-                <img src="../assets/img/MARSU LOGO.png" alt="MarSU Logo" height="40" class="me-2">
-                MarSU Admin
-            </a>
-            <!-- Sidebar Toggle-->
-            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!">
-                <i class="fas fa-bars"></i>
-            </button>
-            <!-- Navbar Search-->
-            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-                <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
-                </div>
-            </form>
-            <!-- Navbar-->
-            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-user fa-fw"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Profile Settings</a></li>
-                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                    <div class="sb-sidenav-menu">
-                        <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Main</div>
-                            <a class="nav-link" href="dashboard.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
-                            </a>
-                            <div class="sb-sidenav-menu-heading">Academic</div>
-                            <a class="nav-link" href="students.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-graduation-cap"></i></div>
-                                Students
-                            </a>
-                            <a class="nav-link" href="faculty.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                                Faculty
-                            </a>
-                            <a class="nav-link" href="courses.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>
-                                Courses
-                            </a>
-                            <!-- <div class="sb-sidenav-menu-heading">Administration</div>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="MSU Admin Dashboard" />
+    <meta name="author" content="Marinduque State University" />
+    <title>MarSU Admin Dashboard</title>
+    <link href="../css/style.min.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/bootstrap-icons.css">
+    <script src="../js/all.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --apple-green: #4CAF50;
+            --apple-green-dark: #388E3C;
+
+        }
+
+        .sb-topnav {
+            background-color: var(--apple-green) !important;
+        }
+
+        .modal-title {
+            color: var(--apple-green);
+        }
+
+        .bg-primary {
+            background-color: var(--apple-green) !important;
+        }
+
+        .btn-primary {
+            background-color: var(--apple-green);
+            border-color: var(--apple-green);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--apple-green-dark);
+            border-color: var(--apple-green-dark);
+        }
+
+        .sb-sidenav-dark .sb-sidenav-menu .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+        }
+
+        .card-header {
+            background-color: white;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+        }
+
+        .sb-nav-fixed #layoutSidenav #layoutSidenav_nav {
+            box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+        }
+    </style>
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" href="../index.html">
+            <img src="../assets/img/MARSU LOGO.png" alt="MarSU Logo" height="40" class="me-2">
+            MarSU Admin
+        </a>
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!">
+            <i class="fas fa-bars"></i>
+        </button>
+        <!-- Navbar Search-->
+        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..."
+                    aria-describedby="btnNavbarSearch" />
+                <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i
+                        class="fas fa-search"></i></button>
+            </div>
+        </form>
+        <!-- Navbar-->
+        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fas fa-user fa-fw"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#!">Profile Settings</a></li>
+                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                            data-bs-target="#logoutModal">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading">Main</div>
+                        <a class="nav-link" href="dashboard.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Dashboard
+                        </a>
+                        <div class="sb-sidenav-menu-heading">Academic</div>
+                        <a class="nav-link" href="students.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-graduation-cap"></i></div>
+                            Students
+                        </a>
+                        <a class="nav-link" href="faculty.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                            Faculty
+                        </a>
+                        <a class="nav-link" href="courses.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>
+                            Courses
+                        </a>
+                        <!-- <div class="sb-sidenav-menu-heading">Administration</div>
                             <a class="nav-link" href="example.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-calendar"></i></div>
                                 Events
@@ -116,249 +132,259 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-bullhorn"></i></div>
                                 Announcements
                             </a> -->
-                             <div class="sb-sidenav-menu-heading">Learning</div>
-                            <a class="nav-link active" href="javascript-guide.html">
-                                <div class="sb-nav-link-icon"><i class="fab fa-js"></i></div>
-                                JavaScript Guide
-                            </a>
-                             <a class="nav-link active" href="javascript-playground.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-code"></i></div>
-                                JavaScript Playground
-                            </a>
-                            <div class="sb-sidenav-menu-heading">BSIS STUDENTS</div>
-                            <a class="nav-link" href="#">
-                                <div class="sb-nav-link-icon"><i class="fas fa-user-graduate"></i></div>
-                                Student Portal
-                            </a>
-                            
-                            
-                        </div>
+                        <div class="sb-sidenav-menu-heading">Learning</div>
+                        <a class="nav-link active" href="javascript-guide.html">
+                            <div class="sb-nav-link-icon"><i class="fab fa-js"></i></div>
+                            JavaScript Guide
+                        </a>
+                        <a class="nav-link active" href="javascript-playground.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-code"></i></div>
+                            JavaScript Playground
+                        </a>
+                        <div class="sb-sidenav-menu-heading">BSIS STUDENTS</div>
+                        <a class="nav-link" href="#">
+                            <div class="sb-nav-link-icon"><i class="fas fa-user-graduate"></i></div>
+                            Student Portal
+                        </a>
                     </div>
-                    <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        Administrator
-                    </div>
-                </nav>
-            </div>
-            <!--CONTENT OF THE PAGE -->
-            <div id="layoutSidenav_content">
-                <main>
-                    <div class="container-fluid px-4">
-                        <h1 class="mt-4">Welcome Administrator</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active"><i class="fas fa-tachometer-alt"></i>Dashboard / Overview</li>
-                        </ol>
-                        <div class="row">
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">
-                                        <div class="d-flex align-items-center">
-                                            <div class="me-3">
-                                                <i class="fas fa-users fa-2x"></i>
-                                            </div>
-                                            <div>
-                                                <div class="small">Total Students</div>
-                                                <h4 class="mb-0">5,248</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">
-                                        <div class="d-flex align-items-center">
-                                            <div class="me-3">
-                                                <i class="fas fa-chalkboard-teacher fa-2x"></i>
-                                            </div>
-                                            <div>
-                                                <div class="small">Total Faculty</div>
-                                                <h4 class="mb-0">245</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-info text-white mb-4">
-                                    <div class="card-body">
-                                        <div class="d-flex align-items-center">
-                                            <div class="me-3">
-                                                <i class="fas fa-book fa-2x"></i>
-                                            </div>
-                                            <div>
-                                                <div class="small">Active Courses</div>
-                                                <h4 class="mb-0">32</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">
-                                        <div class="d-flex align-items-center">
-                                            <div class="me-3">
-                                                <i class="fas fa-calendar fa-2x"></i>
-                                            </div>
-                                            <div>
-                                                <div class="small">Upcoming Events</div>
-                                                <h4 class="mb-0">8</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-book me-1"></i>
-                                        JavaScript Guide
-                                    </div>
-                                    <div class="card-body">
-                                        <h5>Getting Started with JavaScript</h5>
-                                        <p>JavaScript is a versatile programming language used to create dynamic and interactive web content. It allows you to implement complex features on web pages, such as interactive forms, animations, and real-time updates.</p>
-                                        <h6>Key Concepts:</h6>
-                                        <ul>
-                                            <li><strong>Variables:</strong> Containers for storing data values. Use <code>let</code>, <code>const</code>, or <code>var</code> to declare variables.</li>
-                                            <li><strong>Data Types:</strong> Common types include strings, numbers, booleans, arrays, and objects.</li>
-                                            <li><strong>Functions:</strong> Blocks of code designed to perform a particular task. They can take inputs (parameters) and return outputs.</li>
-                                            <li><strong>Events:</strong> Actions that occur in the browser, such as clicks or key presses, which can trigger JavaScript functions.</li>
-                                            <li><strong>DOM Manipulation:</strong> The Document Object Model (DOM) represents the structure of a web page. JavaScript can be used to dynamically change the content and style of web pages by interacting with the DOM.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-bullhorn me-1"></i>
-                                        Recent Announcements
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="list-group">
-                                            <a href="#" class="list-group-item list-group-item-action">
-                                                <div class="d-flex w-100 justify-content-between">
-                                                    <h6 class="mb-1">First Semester Enrollment Open</h6>
-                                                    <small class="text-muted">3 days ago</small>
-                                                </div>
-                                                <p class="mb-1">Enrollment for First Semester 2025-2026 is now open.</p>
-                                            </a>
-                                            <a href="#" class="list-group-item list-group-item-action">
-                                                <div class="d-flex w-100 justify-content-between">
-                                                    <h6 class="mb-1">Research Conference 2025</h6>
-                                                    <small class="text-muted">5 days ago</small>
-                                                </div>
-                                                <p class="mb-1">Annual Research Conference scheduled for October 2025.</p>
-                                            </a>
-                                            <a href="#" class="list-group-item list-group-item-action">
-                                                <div class="d-flex w-100 justify-content-between">
-                                                    <h6 class="mb-1">University Sports Festival</h6>
-                                                    <small class="text-muted">1 week ago</small>
-                                                </div>
-                                                <p class="mb-1">University-wide sports festival starting next month.</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-calendar me-1"></i>
-                                        Upcoming Events
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="list-group">
-                                            <a href="#" class="list-group-item list-group-item-action">
-                                                <div class="d-flex w-100 justify-content-between">
-                                                    <h6 class="mb-1">Faculty Meeting</h6>
-                                                    <small class="text-muted">Tomorrow</small>
-                                                </div>
-                                                <p class="mb-1">General Faculty Meeting at Main Auditorium</p>
-                                            </a>
-                                            <a href="#" class="list-group-item list-group-item-action">
-                                                <div class="d-flex w-100 justify-content-between">
-                                                    <h6 class="mb-1">Student Council Election</h6>
-                                                    <small class="text-muted">Next Week</small>
-                                                </div>
-                                                <p class="mb-1">Annual Student Council Election</p>
-                                            </a>
-                                            <a href="#" class="list-group-item list-group-item-action">
-                                                <div class="d-flex w-100 justify-content-between">
-                                                    <h6 class="mb-1">Foundation Day</h6>
-                                                    <small class="text-muted">2 weeks from now</small>
-                                                </div>
-                                                <p class="mb-1">MSU Foundation Day Celebration</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </main>
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Marinduque State University 2025</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-            </div>
+                </div>
+                <div class="sb-sidenav-footer">
+                    <div class="small">Logged in as:</div>
+                    Administrator
+                </div>
+            </nav>
         </div>
-        <!-- Logout Modal -->
-        <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="logoutModalLabel">Confirm Logout</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!--CONTENT OF THE PAGE -->
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4">
+                    <h1 class="mt-4">Welcome Administrator</h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item active"><i class="fas fa-tachometer-alt"></i>Dashboard / Overview
+                        </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card bg-primary text-white mb-4">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div class="me-3">
+                                            <i class="fas fa-users fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <div class="small">Total Students</div>
+                                            <h4 class="mb-0">5,248</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="small text-white stretched-link" href="#">View Details</a>
+                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card bg-success text-white mb-4">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div class="me-3">
+                                            <i class="fas fa-chalkboard-teacher fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <div class="small">Total Faculty</div>
+                                            <h4 class="mb-0">245</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="small text-white stretched-link" href="#">View Details</a>
+                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card bg-info text-white mb-4">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div class="me-3">
+                                            <i class="fas fa-book fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <div class="small">Active Courses</div>
+                                            <h4 class="mb-0">32</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="small text-white stretched-link" href="#">View Details</a>
+                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card bg-warning text-white mb-4">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div class="me-3">
+                                            <i class="fas fa-calendar fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <div class="small">Upcoming Events</div>
+                                            <h4 class="mb-0">8</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="small text-white stretched-link" href="#">View Details</a>
+                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        Are you sure you want to logout?
+
+
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fas fa-book me-1"></i>
+                                    JavaScript Guide
+                                </div>
+                                <div class="card-body">
+                                    <h5>Getting Started with JavaScript</h5>
+                                    <p>JavaScript is a versatile programming language used to create dynamic and
+                                        interactive web content. It allows you to implement complex features on web
+                                        pages, such as interactive forms, animations, and real-time updates.</p>
+                                    <h6>Key Concepts:</h6>
+                                    <ul>
+                                        <li><strong>Variables:</strong> Containers for storing data values. Use
+                                            <code>let</code>, <code>const</code>, or <code>var</code> to declare
+                                            variables.</li>
+                                        <li><strong>Data Types:</strong> Common types include strings, numbers,
+                                            booleans, arrays, and objects.</li>
+                                        <li><strong>Functions:</strong> Blocks of code designed to perform a particular
+                                            task. They can take inputs (parameters) and return outputs.</li>
+                                        <li><strong>Events:</strong> Actions that occur in the browser, such as clicks
+                                            or key presses, which can trigger JavaScript functions.</li>
+                                        <li><strong>DOM Manipulation:</strong> The Document Object Model (DOM)
+                                            represents the structure of a web page. JavaScript can be used to
+                                            dynamically change the content and style of web pages by interacting with
+                                            the DOM.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                        <a href="../index.html" class="btn btn-danger">Yes</a>
+
+
+
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fas fa-bullhorn me-1"></i>
+                                    Recent Announcements
+                                </div>
+                                <div class="card-body">
+                                    <div class="list-group">
+                                        <a href="#" class="list-group-item list-group-item-action">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h6 class="mb-1">First Semester Enrollment Open</h6>
+                                                <small class="text-muted">3 days ago</small>
+                                            </div>
+                                            <p class="mb-1">Enrollment for First Semester 2025-2026 is now open.</p>
+                                        </a>
+                                        <a href="#" class="list-group-item list-group-item-action">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h6 class="mb-1">Research Conference 2025</h6>
+                                                <small class="text-muted">5 days ago</small>
+                                            </div>
+                                            <p class="mb-1">Annual Research Conference scheduled for October 2025.</p>
+                                        </a>
+                                        <a href="#" class="list-group-item list-group-item-action">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h6 class="mb-1">University Sports Festival</h6>
+                                                <small class="text-muted">1 week ago</small>
+                                            </div>
+                                            <p class="mb-1">University-wide sports festival starting next month.</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fas fa-calendar me-1"></i>
+                                    Upcoming Events
+                                </div>
+                                <div class="card-body">
+                                    <div class="list-group">
+                                        <a href="#" class="list-group-item list-group-item-action">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h6 class="mb-1">Faculty Meeting</h6>
+                                                <small class="text-muted">Tomorrow</small>
+                                            </div>
+                                            <p class="mb-1">General Faculty Meeting at Main Auditorium</p>
+                                        </a>
+                                        <a href="#" class="list-group-item list-group-item-action">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h6 class="mb-1">Student Council Election</h6>
+                                                <small class="text-muted">Next Week</small>
+                                            </div>
+                                            <p class="mb-1">Annual Student Council Election</p>
+                                        </a>
+                                        <a href="#" class="list-group-item list-group-item-action">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h6 class="mb-1">Foundation Day</h6>
+                                                <small class="text-muted">2 weeks from now</small>
+                                            </div>
+                                            <p class="mb-1">MSU Foundation Day Celebration</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </main>
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Copyright &copy; Marinduque State University 2025</div>
+                        <div>
+                            <a href="#">Privacy Policy</a>
+                            &middot;
+                            <a href="#">Terms &amp; Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- Logout Modal -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutModalLabel">Confirm Logout</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to logout?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                    <a href="../index.html" class="btn btn-danger">Yes</a>
                 </div>
             </div>
         </div>
+    </div>
 
-        <script src="../js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="../js/scripts.js"></script>
-        <script src="../js/simple-datatables.min.js" crossorigin="anonymous"></script>
-        <script src="../js/datatables-simple-demo.js"></script>
-    </body>
+    <script src="../js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/simple-datatables.min.js" crossorigin="anonymous"></script>
+    <script src="../js/datatables-simple-demo.js"></script>
+</body>
+
 </html>

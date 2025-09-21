@@ -1,34 +1,34 @@
 {
     "students": [
         {
-            "studentID": null,
+            "studentID": "",
             "studentName": "",
             "year": "",
             "contact": "",
-            "course": null
+            "course": ""
         }
     ],
     "faculty": [
         {
-            "facultyID": null,
+            "facultyID": "",
             "facultyName": "",
             "position": "",
             "contact": "",
-            "department": null
+            "department": ""
         }
     ],
     "course": [
         {
-            "courseID": null,
+            "courseID": "",
             "courseName": "",
             "unit": null,
             "students": null,
-            "department": null
+            "department": ""
         }
     ],
     "department": [
         {
-            "departmentID": null,
+            "departmentID": "",
             "departmentName": ""
         }
     ]
