@@ -1,4 +1,4 @@
-const CryptoJS = require('crypto-js');
+import CryptoJS from 'crypto-js';
 
 // Generate random bytes (returns WordArray)
 function randomBytes(length) {
@@ -13,7 +13,16 @@ function generateSalt(length = 16) {
 function generateIV(length = 16) {
     return randomBytes(length);
 }
+
+function hashPassword(password, salt, keySize = 256 / 32, iterations = 200000) {
+    return CryptoJS.PBKDF2(password, salt, {
+        keySize: keySize,
+        iterations: iterations,
+        hasher: CryptoJS.algo.SHA256
+    }).toString(CryptoJS.enc.Base64);
+}
 // Derive key using PBKDF2
+
 function deriveKey(password, salt, keySize = 256 / 32, iterations = 200000) {
     return CryptoJS.PBKDF2(password, salt, {
         keySize: keySize,
@@ -23,19 +32,17 @@ function deriveKey(password, salt, keySize = 256 / 32, iterations = 200000) {
 }
 
 // Encrypt with password
-function encryptWithPassword(plaintext, password) {
-    const salt = generateSalt();
-    const iv = generateIV();
+function encryptWithPassword(plaintext, password, salt, iv) {
     const key = deriveKey(password, salt);
 
-    const encrypted = CryptoJS.AES.encrypt(plaintext, key, { iv: iv });
+    return encrypted = CryptoJS.AES.encrypt(plaintext, key, { iv: iv });
 
     // Pack salt + iv + ciphertext into JSON (base64 fields)
-    return JSON.stringify({
+    /*return JSON.stringify({
         ct: encrypted.ciphertext.toString(CryptoJS.enc.Base64),
         iv: iv.toString(CryptoJS.enc.Base64),
         s: salt.toString(CryptoJS.enc.Base64)
-    });
+    });*/
 }
 
 // Decrypt with password
@@ -57,7 +64,7 @@ function decryptWithPassword(jsonStr, password) {
     return decrypted.toString(CryptoJS.enc.Utf8);
 }
 
-export { generateSalt, generateSalt, deriveKey, encryptWithPassword, decryptWithPassword };
+export { generateSalt, generateIV, hashPassword, deriveKey, encryptWithPassword, decryptWithPassword, CryptoJS };
 
 // Example
 /*const password = "myStrongPassword";
