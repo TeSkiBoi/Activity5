@@ -5,12 +5,12 @@
             "loginID": "",
             "user_type": "",
             "hashedsaltedPassword": "",
+            "iv": "",
             "salt": ""
         }
     ],
     "students": [
         {
-            "studentID": "",
             "studentName": "",
             "year": "",
             "contact": "",
@@ -20,7 +20,6 @@
     ],
     "faculty": [
         {
-            "facultyID": "",
             "facultyName": "",
             "position": "",
             "contact": "",

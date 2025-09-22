@@ -5,6 +5,14 @@ function randomBytes(length) {
     return CryptoJS.lib.WordArray.random(length);
 }
 
+
+function generateSalt(length = 16) {
+    return randomBytes(length);
+}
+
+function generateIV(length = 16) {
+    return randomBytes(length);
+}
 // Derive key using PBKDF2
 function deriveKey(password, salt, keySize = 256 / 32, iterations = 200000) {
     return CryptoJS.PBKDF2(password, salt, {
@@ -16,8 +24,8 @@ function deriveKey(password, salt, keySize = 256 / 32, iterations = 200000) {
 
 // Encrypt with password
 function encryptWithPassword(plaintext, password) {
-    const salt = randomBytes(16);
-    const iv = randomBytes(16);
+    const salt = generateSalt();
+    const iv = generateIV();
     const key = deriveKey(password, salt);
 
     const encrypted = CryptoJS.AES.encrypt(plaintext, key, { iv: iv });
@@ -49,8 +57,10 @@ function decryptWithPassword(jsonStr, password) {
     return decrypted.toString(CryptoJS.enc.Utf8);
 }
 
+export { generateSalt, generateSalt, deriveKey, encryptWithPassword, decryptWithPassword };
+
 // Example
-const password = "myStrongPassword";
+/*const password = "myStrongPassword";
 const plaintext = "Hello CryptoJS + PBKDF2!";
 
 const encrypted = encryptWithPassword(plaintext, password);
@@ -58,3 +68,4 @@ console.log("Encrypted JSON:", encrypted);
 
 const decrypted = decryptWithPassword(encrypted, password);
 console.log("Decrypted:", decrypted);
+*/
