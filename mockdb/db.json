@@ -1,11 +1,21 @@
 {
+    "user": [
+        {
+            "userID": "",
+            "loginID": "",
+            "user_type": "",
+            "hashedsaltedPassword": "",
+            "salt": ""
+        }
+    ],
     "students": [
         {
             "studentID": "",
             "studentName": "",
             "year": "",
             "contact": "",
-            "course": ""
+            "course": "",
+            "userID": ""
         }
     ],
     "faculty": [
@@ -14,7 +24,8 @@
             "facultyName": "",
             "position": "",
             "contact": "",
-            "department": ""
+            "department": "",
+            "userID": ""
         }
     ],
     "course": [
