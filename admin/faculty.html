@@ -52,6 +52,10 @@
             border-radius: 50%;
             object-fit: cover;
         }
+
+        #newFaculty {
+            background-color: var(--apple-green);
+        }
     </style>
 </head>
 
@@ -150,7 +154,8 @@
                             </ol>
                         </div>
                         <div>
-                            <button type="button" class="btn btn-primary">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#addNewFaculty">
                                 <i class="fas fa-plus"></i> Add New Faculty
                             </button>
                         </div>
@@ -273,6 +278,92 @@
         </div>
     </div>
 
+
+    <!-- ADD COURSE MODAL -->
+    <div class="modal fade" id="addNewFaculty" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 flex-column text-white" id="newFaculty">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="text-center w-100 pb-3">
+                        <h4 class="modal-title fw-bold"><i class="fa fa-chalkboard-teacher"></i> Add New Faculty</h4>
+                    </div>
+                </div>
+                <div class="modal-body px-4">
+                    <form id="addFaculty" class="needs-validation" novalidate>
+                        <div class="mb-4">
+                            <label for="facultyID" class="form-label">Faculty ID</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0">
+                                    <i class="bi bi-person text-fill"></i>
+                                </span>
+                                <input type="text" class="form-control border-start-0" id="courseID" required
+                                    placeholder="Enter faculty ID" id="facultyID">
+                                <div class="invalid-feedback">Please enter faculty ID</div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="facultyName" class="form-label">Username</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0">
+                                    <i class="bi bi-book text-fill"></i>
+                                </span>
+                                <input type="text" class="form-control border-start-0" id="courseName" required
+                                    placeholder="Enter username" id="facultyName">
+                                <div class="invalid-feedback">Please enter username</div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="course" class="form-label">Department</label>
+                            <div class="datatable-dropdown">
+                                <select class="datatable-selector" aria-labelledby="dropdownMenuButton">
+                                    <option><a value="BS Computer Science">Computer Science</a></li>
+                                    <option><a value="BS Information Technology">Information Technology</a></li>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="courseUnits" class="form-label">Units</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0">
+                                    <i class="bi bi-123 text-primary"></i>
+                                </span>
+                                <input type="number" class="form-control border-start-0" id="studentsenrolled" required
+                                    placeholder="Enter number of course units" id="studentsenrolled">
+                                <div class="invalid-feedback">Enter number of units</div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="studentsenrolled" class="form-label">Students Enrolled</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0">
+                                    <i class="bi bi-people text-primary"></i>
+                                </span>
+                                <input type="number" class="form-control border-start-0" id="studentsenrolled" required
+                                    placeholder="Enter number of students enrolled" id="studentsenrolled">
+                                <div class="invalid-feedback">Enter number of students enrolled</div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="courseStatus" class="form-label">Status</label>
+                            <div class="datatable-dropdown">
+                                <select class="datatable-selector" aria-labelledby="dropdownMenuButton">
+                                    <option><a value="Active">Active</a></li>
+                                    <option><a value="Pending">Pending</a></li>
+                                    <option><a value="Not available">Not available</a></li>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary py-2 fw-bold">
+                                <span class="me-2">Add New Course</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!--MODAL FOR DELETING THE USERS-->
