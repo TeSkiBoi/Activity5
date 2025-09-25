@@ -193,7 +193,8 @@
                                         <td>john.smith@msu.edu</td>
                                         <td><span class="badge bg-success">Active</span></td>
                                         <td class="action-buttons">
-                                            <button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
+                                            <button class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                                data-bs-target="#editFaculty"><i class="fas fa-edit"></i></button>
                                             <button class="btn btn-info btn-sm" data-bs-toggle="modal"
                                                 data-bs-target="#viewingFaculty"><i class="fas fa-eye"></i></button>
                                             <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
@@ -212,7 +213,8 @@
                                         <td>maria.garcia@msu.edu</td>
                                         <td><span class="badge bg-success">Active</span></td>
                                         <td class="action-buttons">
-                                            <button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
+                                            <button class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                                data-bs-target="#editFaculty"><i class="fas fa-edit"></i></button>
                                             <button class="btn btn-info btn-sm" data-bs-toggle="modal"
                                                 data-bs-target="#viewingFaculty"><i class="fas fa-eye"></i></button>
                                             <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
@@ -231,7 +233,8 @@
                                         <td>robert.chen@msu.edu</td>
                                         <td><span class="badge bg-success">Active</span></td>
                                         <td class="action-buttons">
-                                            <button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
+                                            <button class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                                data-bs-target="#editFaculty"><i class="fas fa-edit"></i></button>
                                             <button class="btn btn-info btn-sm" data-bs-toggle="modal"
                                                 data-bs-target="#viewingFaculty"><i class="fas fa-eye"></i></button>
                                             <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
@@ -250,7 +253,8 @@
                                         <td>sarah.johnson@msu.edu</td>
                                         <td><span class="badge bg-warning text-dark">On Leave</span></td>
                                         <td class="action-buttons">
-                                            <button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
+                                            <button class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                                data-bs-target="#editFaculty"><i class="fas fa-edit"></i></button>
                                             <button class="btn btn-info btn-sm view-faculty" data-bs-toggle="modal"
                                                 data-bs-target="#viewingFaculty"><i class="fas fa-eye"></i></button>
                                             <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
@@ -349,7 +353,7 @@
                             <div class="datatable-dropdown">
                                 <select class="datatable-selector" aria-labelledby="dropdownMenuButton">
                                     <option><a value="Active">Active</a></li>
-                                    <option><a value="Pending">Pending</a></li>
+                                    <option><a value="Pending">On Vacation</a></li>
                                     <option><a value="Not available">Not available</a></li>
                                 </select>
                             </div>
@@ -365,6 +369,84 @@
         </div>
     </div>
 
+
+    <!-- EDITING FACULTY MODAL -->
+    <div class="modal fade" id="editFaculty" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 flex-column text-white" id="editFaculty">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="text-center w-100 pb-3">
+                        <h4 class="modal-title fw-bold"><i class="fa fa-chalkboard-teacher"></i> Edit Faculty</h4>
+                    </div>
+                </div>
+                <div class="modal-body px-4">
+                    <form id="editFacultyInfo" class="needs-validation" novalidate>
+                        <div class="mb-4">
+                            <label for="facultyName" class="form-label">Username</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0">
+                                    <i class="bi bi-person text-fill"></i>
+                                </span>
+                                <input type="text" class="form-control border-start-0" id="courseName" required
+                                    placeholder="Enter username" id="facultyName">
+                                <div class="invalid-feedback">Please enter username</div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="deparment" class="form-label">Department</label>
+                            <div class="datatable-dropdown">
+                                <select class="datatable-selector" aria-labelledby="dropdownMenuButton">
+                                    <option><a value="BS Computer Science">Computer Science</a></li>
+                                    <option><a value="BS Information Technology">Information Technology</a></li>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="facultyPosition" class="form-label">Position</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0">
+                                    <i class="bi bi-mortarboard text-primary"></i>
+                                </span>
+                                <input type="text" class="form-control border-start-0" id="studentsenrolled" required
+                                    placeholder="Enter position" id="facultyPosition">
+                                <div class="invalid-feedback">Enter position</div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="contact" class="form-label">Email</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0">
+                                    <i class="bi bi-envelope text-primary"></i>
+                                </span>
+                                <input type="email" class="form-control border-start-0" id="contact" required
+                                    placeholder="Enter email" id="contact">
+                                <div class="invalid-feedback">Please enter email</div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="facultyStatus" class="form-label">Status</label>
+                            <div class="datatable-dropdown">
+                                <select class="datatable-selector" aria-labelledby="dropdownMenuButton">
+                                    <option><a value="Active">Active</a></li>
+                                    <option><a value="Pending">On Vacation</a></li>
+                                    <option><a value="Not available">Not available</a></li>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary py-2 fw-bold">
+                                <span class="me-2">Confirm</span>
+                            </button>
+                            <button type="submit" class="btn btn-primary py-2 fw-bold">
+                                <span class="me-2">Cancel</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--MODAL FOR DELETING THE USERS-->
     <div class="modal fade" id="deletingFaculty" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
@@ -428,13 +510,15 @@
         const userData = {
             id: "F001",
             name: "Dr. John Smith",
+            deparment: "Computer Science",
             email: "john.smith@msu.edu",
             position: "Department Head"
         };
         document.getElementById("viewingFacultyId").textContent = userData.id;
         document.getElementById("viewingFacultyName").textContent = userData.name;
+        document.getElementById("viewingFacultyDepartment").textContent = userData.deparment;
         document.getElementById("viewingFacultyEmail").textContent = userData.email;
-        document.getElementById("viewingFacultyRole").textContent = userData.position;
+        document.getElementById("viewingFacultyPosition").textContent = userData.position;
     </script>
 
 

@@ -370,6 +370,85 @@
         </div>
     </div>
 
+    <!-- ADD STUDENT MODAL -->
+    <div class="modal fade" id="editStudent" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 flex-column text-white" id="editStudent">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="text-center w-100 pb-3">
+                        <h4 class="modal-title fw-bold">Edit Student</h4>
+                    </div>
+                </div>
+                <div class="modal-body px-4">
+                    <form id="editStudentInfo" class="needs-validation" novalidate>
+                        <div class="mb-4">
+                            <label for="username" class="form-label">Username</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0">
+                                    <i class="bi bi-person text-fill"></i>
+                                </span>
+                                <input type="text" class="form-control border-start-0" id="username" required
+                                    placeholder="Enter username" id="studentName">
+                                <div class="invalid-feedback">Please enter username</div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="contact" class="form-label">Email</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0">
+                                    <i class="bi bi-envelope text-primary"></i>
+                                </span>
+                                <input type="email" class="form-control border-start-0" id="contact" required
+                                    placeholder="Enter email" id="contact">
+                                <div class="invalid-feedback">Please enter email</div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="year" class="form-label">Year Level</label>
+                            <div class="datatable-dropdown">
+                                <select class="datatable-selector" aria-labelledby="dropdownMenuButton">
+                                    <option><a value="1st Year">1st Year</a></li>
+                                    <option><a value="2nd Year">2nd Year</a></li>
+                                    <option><a value="3rd Year">3rd Year</a></li>
+                                    <option><a value="4th Year">4th Year</a></li>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="course" class="form-label">Course</label>
+                            <div class="datatable-dropdown">
+                                <select class="datatable-selector" aria-labelledby="dropdownMenuButton">
+                                    <option><a value="BS Computer Science">BS Computer Science</a></li>
+                                    <option><a value="BS Information Technology">BS Information Technology</a></li>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="studentStatus" class="form-label">Status</label>
+                            <div class="datatable-dropdown">
+                                <select class="datatable-selector" aria-labelledby="dropdownMenuButton">
+                                    <option><a value="Active">Active</a></li>
+                                    <option><a value="Pending">Pending</a></li>
+                                    <option><a value="Not available">Not available</a></li>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center gap-2">
+                            <button type="submit" class="btn btn-primary py-2 fw-bold">
+                                <span class="me-2">Confirm</span>
+                            </button>
+                            <button type="submit" class="btn btn-primary py-2 fw-bold">
+                                <span class="me-2">Cancel</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!--MODAL FOR DELETING THE USERS-->
     <div class="modal fade" id="deletingStudent" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog">
