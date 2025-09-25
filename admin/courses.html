@@ -49,6 +49,10 @@
         #newCourse {
             background-color: var(--apple-green);
         }
+
+        #editCourseInfo {
+            background-color: var(--apple-green);
+        }
     </style>
 </head>
 
@@ -345,18 +349,18 @@
         </div>
     </div>
 
-    <!-- ADD COURSE MODAL -->
+    <!-- EDIT COURSE MODAL -->
     <div class="modal fade" id="editCourse" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header border-0 flex-column text-white" id="newCourse">
+                <div class="modal-header border-0 flex-column text-white" id="editCourseInfo">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="text-center w-100 pb-3">
-                        <h4 class="modal-title fw-bold"><i class="fa fa-book"></i> Edit Course</h4>
+                        <h4 class="modal-title fw-bold"><i class="fa fa-edit"></i> Edit Course</h4>
                     </div>
                 </div>
                 <div class="modal-body px-4">
-                    <form id="editCourseInfo" class="needs-validation" novalidate>
+                    <form id="editCourseForm" class="needs-validation" novalidate>
                         <div class="mb-4">
                             <label for="courseName" class="form-label">Course</label>
                             <div class="input-group">
@@ -409,12 +413,12 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary py-2 fw-bold">
-                                <span class="me-2">Confirm</span>
-                            </button>
+                        <div class="d-flex justify-content-center gap-2">
                             <button type="submit" class="btn btn-primary py-2 fw-bold">
                                 <span class="me-2">Cancel</span>
+                            </button>
+                            <button type="submit" class="btn btn-primary py-2 fw-bold">
+                                <span class="me-2">Confirm</span>
                             </button>
                         </div>
                     </form>
