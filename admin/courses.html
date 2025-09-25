@@ -281,7 +281,7 @@
                 </div>
                 <div class="modal-body">
 
-                    <p><strong>ID:</strong> <span id="viewingCourseId"></span></p>
+                    <p><strong>Course ID:</strong> <span id="viewingCourseId"></span></p>
                     <p><strong>Course Name:</strong> <span id="viewingCourseName"></span></p>
                     <p><strong>Units:</strong> <span id="viewingUnits"></span></p>
                     <p><strong>Students Enrolled:</strong> <span id="viewingStudentsEnrolled"></span></p>
@@ -316,10 +316,11 @@
             email: "john.smith@msu.edu",
             role: "Department Head"
         };
-        document.getElementById("viewingUserId").textContent = userData.id;
-        document.getElementById("viewingUserName").textContent = userData.name;
-        document.getElementById("viewingUserEmail").textContent = userData.email;
-        document.getElementById("viewingUserRole").textContent = userData.role;
+        document.getElementById("viewingCourseId").textContent = userData.id;
+        document.getElementById("viewingCourseName").textContent = userData.name;
+        document.getElementById("viewingDepartment").textContent = userData.email;
+        document.getElementById("viewingUnits").textContent = userData.role;
+        document.getElementById("viewingStudentsEnrolled").textContent = userData.role;
     </script>
 </body>
 

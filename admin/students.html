@@ -292,8 +292,7 @@
                     </div>
                 </div>
                 <div class="modal-body px-4">
-
-                    <form id="loginForm" class="needs-validation" novalidate>
+                    <form id="addStudent" class="needs-validation" novalidate>
                         <div class="mb-4">
                             <label for="username" class="form-label">Username</label>
                             <div class="input-group">
@@ -301,7 +300,7 @@
                                     <i class="bi bi-person-fill text-primary"></i>
                                 </span>
                                 <input type="text" class="form-control border-start-0" id="username" required
-                                    placeholder="Enter your username" id="studentName">
+                                    placeholder="Enter username" id="studentName">
                                 <div class="invalid-feedback">Please enter username</div>
                             </div>
                         </div>
@@ -312,67 +311,37 @@
                                     <i class="bi bi-lock-fill text-primary"></i>
                                 </span>
                                 <input type="email" class="form-control border-start-0" id="contact" required
-                                    placeholder="Enter your email" id="Email">
+                                    placeholder="Enter email" id="Email">
                                 <div class="invalid-feedback">Please enter email</div>
                             </div>
                         </div>
-                        <div class="row mb-4">
-                            <div class="col-md-6">
-                                <label for="year" class="form-label">Year Level</label>
-                                <div class="dropdown">
-                                    <button class="btn btn-white dropdown-toggle dropdown-hover" type="button" id="Year"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <li>
-                                            <h6 class="dropdown-header">Select Year Level</h6>
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">1st Year</a></li>
-                                        <li><a class="dropdown-item" href="#">2nd Year</a></li>
-                                        <li><a class="dropdown-item" href="#">3rd Year</a></li>
-                                        <li><a class="dropdown-item" href="#">4th Year</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="course" class="form-label">Course</label>
-                                <div class="dropdown">
-                                    <button class="btn btn-white dropdown-toggle dropdown-hover" type="button"
-                                        id="Course" data-bs-toggle="dropdown" aria-expanded="false">
-                                        BS Computer Science
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <li>
-                                            <h6 class="dropdown-header">Select Course</h6>
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">BS Computer Science</a></li>
-                                        <li><a class="dropdown-item" href="#">BS Information Technology</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="mb-4">
-                                <label for="password" class="form-label">Password</label>
-                                <div class="input-group">
-                                    <span class="input-group-text bg-light border-end-0">
-                                        <i class="bi bi-lock-fill text-primary"></i>
-                                    </span>
-                                    <input type="password" class="form-control border-start-0" id="password" required
-                                        placeholder="Enter your password">
-                                    <div class="invalid-feedback">Please enter password</div>
-                                </div>
-                            </div>
-                            <div class="d-grid gap-2">
-                                <button type="submit" class="btn btn-primary py-2 fw-bold">
-                                    <span class="me-2">Create New Account</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                </button>
+                        <div class="mb-4">
+                            <label for="year" class="form-label">Year Level</label>
+                            <div class="datatable-dropdown">
+                                <select class="datatable-selector" aria-labelledby="dropdownMenuButton">
+                                    <option><a value="1st Year">1st Year</a></li>
+                                    <option><a value="2nd Year">2nd Year</a></li>
+                                    <option><a value="3rd Year">3rd Year</a></li>
+                                    <option><a value="4th Year">4th Year</a></li>
+                                </select>
                             </div>
                         </div>
+                        <div class="mb-4">
+                            <label for="course" class="form-label">Course</label>
+                            <div class="datatable-dropdown">
+                                <select class="datatable-selector" aria-labelledby="dropdownMenuButton">
+                                    <option><a value="BS Computer Science">BS Computer Science</a></li>
+                                    <option><a value="BS Information Technology">BS Information Technology</a></li>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary py-2 fw-bold">
+                                <span class="me-2">Add New Studen</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
                     </form>
-                </div>
-                <div class="modal-footer justify-content-center border-0 pt-0">
-                    <p class="text-muted">Don't have an account? <a href="#"
-                            class="text-primary text-decoration-none">Contact Admin</a></p>
                 </div>
             </div>
         </div>
@@ -433,7 +402,6 @@
             }
         });
     </script>
-
     <script>
         document.querySelectorAll('.dropdown-item').forEach(item => {
             item.addEventListener('click', function (e) {
@@ -441,34 +409,6 @@
                 const button = document.getElementById('dropdownMenuButton');
                 button.textContent = this.textContent;
             });
-        });
-    </script>
-    <script src="/mockdb/mockquery.js">
-        const form = document.getElementById('loginForm');
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            const name = document.getElementById('studentName').value;
-            const email = document.getElementById('Email').value;
-            const password = document.getElementById('Password').value;
-            const year = document.getElementById('Year').textContent.trim();
-            const course = document.getElementById('Course').textContent.trim();
-
-            try {
-                const res = await fetch('/add-student', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ name, email, password, year, course })
-                });
-
-                const data = await res.json();
-                if (data.success) {
-                    alert('Student added successfully!');
-                }
-            } catch (err) {
-                console.error(err);
-                alert('Failed to add student.');
-            }
         });
     </script>
     <script>
