@@ -361,9 +361,9 @@
                             <label for="studentStatus" class="form-label">Status</label>
                             <div class="datatable-dropdown">
                                 <select class="datatable-selector" aria-labelledby="dropdownMenuButton">
-                                    <option><a value="Active">Active</a></li>
+                                    <option><a value="Enrolled">Enrolled</a></li>
                                     <option><a value="Pending">Pending</a></li>
-                                    <option><a value="Not available">Not available</a></li>
+                                    <option><a value="Not Enrolled">Not Enrolled</a></li>
                                 </select>
                             </div>
                         </div>
@@ -436,9 +436,9 @@
                             <label for="studentStatus" class="form-label">Status</label>
                             <div class="datatable-dropdown">
                                 <select class="datatable-selector" aria-labelledby="dropdownMenuButton">
-                                    <option><a value="Active">Active</a></li>
+                                    <option><a value="Enrolled">Enrolled</a></li>
                                     <option><a value="Pending">Pending</a></li>
-                                    <option><a value="Not available">Not available</a></li>
+                                    <option><a value="Not Enrolled">Not Enrolled</a></li>
                                 </select>
                             </div>
                         </div>
@@ -487,10 +487,12 @@
                 </div>
                 <div class="modal-body">
 
-                    <p><strong>ID:</strong> <span id="viewingUserId"></span></p>
-                    <p><strong>Name:</strong> <span id="viewingUserName"></span></p>
-                    <p><strong>Email:</strong> <span id="viewingUserEmail"></span></p>
-                    <p><strong>Course:</strong> <span id="viewingUserRole"></span></p>
+                    <p><strong>ID:</strong> <span id="viewingStudentId"></span></p>
+                    <p><strong>Name:</strong> <span id="viewingStudentName"></span></p>
+                    <p><strong>Course:</strong> <span id="viewingStudentCourse"></span></p>
+                    <p><strong>Year:</strong> <span id="viewingStudentYear"></span></p>
+                    <p><strong>Email:</strong> <span id="viewingStudentEmail"></span></p>
+
 
                 </div>
                 <div class="modal-footer">
@@ -514,16 +516,18 @@
     </script>
     <script>
         // Example static data
-        const userData = {
-            id: "F001",
-            name: "Dr. John Smith",
-            email: "john.smith@msu.edu",
-            role: "Department Head"
+        const studentData = {
+            id: "2025-0001",
+            name: "Juan Dela Cruz",
+            course: "BS Computer Science",
+            year: "3rd Year",
+            email: "juan.delacruz@student.msu.edu",
         };
-        document.getElementById("viewingUserId").textContent = userData.id;
-        document.getElementById("viewingUserName").textContent = userData.name;
-        document.getElementById("viewingUserEmail").textContent = userData.email;
-        document.getElementById("viewingUserRole").textContent = userData.role;
+        document.getElementById("viewingStudentId").textContent = studentData.id;
+        document.getElementById("viewingStudentName").textContent = studentData.name;
+        document.getElementById("viewingStudentCourse").textContent = studentData.course;
+        document.getElementById("viewingStudentYear").textContent = studentData.year;
+        document.getElementById("viewingStudentEmail").textContent = studentData.email;
     </script>
 </body>
 

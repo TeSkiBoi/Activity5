@@ -460,6 +460,7 @@
 
                     <p><strong>Course ID:</strong> <span id="viewingCourseId"></span></p>
                     <p><strong>Course Name:</strong> <span id="viewingCourseName"></span></p>
+                    <p><strong>Department:</strong> <span id="viewingDepartment"></span></p>
                     <p><strong>Units:</strong> <span id="viewingUnits"></span></p>
                     <p><strong>Students Enrolled:</strong> <span id="viewingStudentsEnrolled"></span></p>
 
@@ -487,17 +488,18 @@
     </script>
     <script>
         // Example static data
-        const userData = {
-            id: "F001",
-            name: "Dr. John Smith",
-            email: "john.smith@msu.edu",
-            role: "Department Head"
+        const courseData = {
+            id: "CS101",
+            coursename: "Introduction to Computing",
+            department: "Computer Science",
+            units: 3,
+            enrolledstudents: 45
         };
-        document.getElementById("viewingCourseId").textContent = userData.id;
-        document.getElementById("viewingCourseName").textContent = userData.name;
-        document.getElementById("viewingDepartment").textContent = userData.email;
-        document.getElementById("viewingUnits").textContent = userData.role;
-        document.getElementById("viewingStudentsEnrolled").textContent = userData.role;
+        document.getElementById("viewingCourseId").textContent = courseData.id;
+        document.getElementById("viewingCourseName").textContent = courseData.coursename;
+        document.getElementById("viewingDepartment").textContent = courseData.department;
+        document.getElementById("viewingUnits").textContent = courseData.units;
+        document.getElementById("viewingStudentsEnrolled").textContent = courseData.enrolledstudents;
     </script>
 </body>
 
