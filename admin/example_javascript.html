@@ -176,55 +176,66 @@
                     <button class="btn btn-success" onclick="showAlert();">Click me to alert</button>
                     <button class="btn btn-success" onclick="showAlertYesNo();">Click me to alert</button>
 
-                    <div id="accordion">
-                        <h3>Section 1</h3>
-                        <div>
-                            <p>
-                                Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
-                                ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
-                                amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
-                                odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-                            </p>
+                    <div class="row">
+                        <div class="col-3">
+                            <form onsubmit="computeSum ();">
+                                <h1>THIS IS COMPUTATION OF 2 NUMBERS</h1><br>
+                                <input type="text" name="" id="num1" class="form-control"
+                                    placeholder="Enter first number" required><br>
+                                <input type="text" nam="" id="num2" class="form-control"
+                                    placeholder="Enter second number" required><br>
+                                <input type="submit" class="tn btn-primary">
+                            </form>
+
+                            <div id="accordion">
+                                <h3>Section 1</h3>
+                                <div>
+                                    <p>
+                                        Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                                        ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                                        amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                                        odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                                    </p>
+                                </div>
+                                <h3>Section 2</h3>
+                                <div>
+                                    <p>
+                                        Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                                        purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                                        velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                                        suscipit faucibus urna.
+                                    </p>
+                                </div>
+                                <h3>Section 3</h3>
+                                <div>
+                                    <p>
+                                        Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+                                        Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+                                        ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+                                        lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+                                    </p>
+                                    <ul>
+                                        <li>List item one</li>
+                                        <li>List item two</li>
+                                        <li>List item three</li>
+                                    </ul>
+                                </div>
+                                <h3>Section 4</h3>
+                                <div>
+                                    <p>
+                                        Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                                        et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                                        faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                                        mauris vel est.
+                                    </p>
+                                    <p>
+                                        Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+                                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                                        inceptos himenaeos.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <h3>Section 2</h3>
-                        <div>
-                            <p>
-                                Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-                                purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-                                velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-                                suscipit faucibus urna.
-                            </p>
-                        </div>
-                        <h3>Section 3</h3>
-                        <div>
-                            <p>
-                                Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-                                Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
-                                ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
-                                lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
-                            </p>
-                            <ul>
-                                <li>List item one</li>
-                                <li>List item two</li>
-                                <li>List item three</li>
-                            </ul>
-                        </div>
-                        <h3>Section 4</h3>
-                        <div>
-                            <p>
-                                Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-                                et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-                                faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-                                mauris vel est.
-                            </p>
-                            <p>
-                                Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-                                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                                inceptos himenaeos.
-                            </p>
-                        </div>
-                    </div>
-                </div>
             </main>
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
@@ -264,6 +275,7 @@
     <script src="../js/scripts.js"></script>
     <script src="../js/simple-datatables.min.js" crossorigin="anonymous"></script>
     <script src="../js/datatables-simple-demo.js"></script>
+    <script src="../js/custom.js"></script>
 </body>
 
 </html>
