@@ -21,6 +21,157 @@
             $("#accordion").accordion();
         });
     </script>
+    <script>
+        $(function () {
+            var availableTags = [
+                "ActionScript",
+                "AppleScript",
+                "Asp",
+                "BASIC",
+                "C",
+                "C++",
+                "Clojure",
+                "COBOL",
+                "ColdFusion",
+                "Erlang",
+                "Fortran",
+                "Groovy",
+                "Haskell",
+                "Java",
+                "JavaScript",
+                "Lisp",
+                "Perl",
+                "PHP",
+                "Python",
+                "Ruby",
+                "Scala",
+                "Scheme"
+            ];
+            $("#tags").autocomplete({
+                source: availableTags
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            $(".widget input[type=submit], .widget a, .widget button").button();
+            $("button, input, a").on("click", function (event) {
+                event.preventDefault();
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            $("input").checkboxradio();
+        });
+    </script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
+    <script>
+        $(function () {
+            $("#dialog").dialog();
+        });
+    </script>
+    <script>
+        $(function () {
+            $("#menu").menu();
+        });
+    </script>
+    <style>
+        .ui-menu {
+            width: 150px;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#progressbar").progressbar({
+                value: 37
+            });
+        });
+    </script>
+    <style>
+        fieldset {
+            border: 0;
+        }
+
+        label {
+            display: block;
+            margin: 30px 0 0 0;
+        }
+
+        .overflow {
+            height: 200px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#speed").selectmenu();
+
+            $("#files").selectmenu();
+
+            $("#number")
+                .selectmenu()
+                .selectmenu("menuWidget")
+                .addClass("overflow");
+
+            $("#salutation").selectmenu();
+        });
+    </script>
+    <script>
+        $(function () {
+            $("#slider").slider();
+        });
+    </script>
+    <script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"></script>
+    <script>
+        $(function () {
+            var spinner = $("#spinner").spinner();
+
+            $("#disable").on("click", function () {
+                if (spinner.spinner("option", "disabled")) {
+                    spinner.spinner("enable");
+                } else {
+                    spinner.spinner("disable");
+                }
+            });
+            $("#destroy").on("click", function () {
+                if (spinner.spinner("instance")) {
+                    spinner.spinner("destroy");
+                } else {
+                    spinner.spinner();
+                }
+            });
+            $("#getvalue").on("click", function () {
+                alert(spinner.spinner("value"));
+            });
+            $("#setvalue").on("click", function () {
+                spinner.spinner("value", 5);
+            });
+
+            $("button").button();
+        });
+    </script>
+    <script>
+        $(function () {
+            $("#tabs").tabs();
+        });
+    </script>
+    <script>
+        $(function () {
+            $(document).tooltip();
+        });
+    </script>
+    <style>
+        label {
+            display: inline-block;
+            width: 5em;
+        }
+    </style>
     <style>
         :root {
             --apple-green: #4CAF50;
@@ -186,56 +337,333 @@
                                     placeholder="Enter second number" required><br>
                                 <input type="submit" class="tn btn-primary">
                             </form>
-
-                            <div id="accordion">
-                                <h3>Section 1</h3>
-                                <div>
-                                    <p>
-                                        Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
-                                        ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
-                                        amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
-                                        odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-                                    </p>
-                                </div>
-                                <h3>Section 2</h3>
-                                <div>
-                                    <p>
-                                        Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-                                        purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-                                        velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-                                        suscipit faucibus urna.
-                                    </p>
-                                </div>
-                                <h3>Section 3</h3>
-                                <div>
-                                    <p>
-                                        Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-                                        Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
-                                        ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
-                                        lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
-                                    </p>
-                                    <ul>
-                                        <li>List item one</li>
-                                        <li>List item two</li>
-                                        <li>List item three</li>
-                                    </ul>
-                                </div>
-                                <h3>Section 4</h3>
-                                <div>
-                                    <p>
-                                        Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-                                        et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-                                        faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-                                        mauris vel est.
-                                    </p>
-                                    <p>
-                                        Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-                                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                                        inceptos himenaeos.
-                                    </p>
-                                </div>
-                            </div>
                         </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-3">
+                            <h1>JQUERY</h1>
+                            <label for="tags" class="form-label">Programming Languages</label>
+                        </div>
+                    </div><br>
+                    <div id="accordion">
+                        <h3>Section 1</h3>
+                        <div>
+                            <p>
+                                Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                                ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                                amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                                odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                            </p>
+                        </div>
+                        <h3>Section 2</h3>
+                        <div>
+                            <p>
+                                Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                                purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                                velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                                suscipit faucibus urna.
+                            </p>
+                        </div>
+                        <h3>Section 3</h3>
+                        <div>
+                            <p>
+                                Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+                                Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+                                ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+                                lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+                            </p>
+                            <ul>
+                                <li>List item one</li>
+                                <li>List item two</li>
+                                <li>List item three</li>
+                            </ul>
+                        </div>
+                        <h3>Section 4</h3>
+                        <div>
+                            <p>
+                                Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                                et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                                faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                                mauris vel est.
+                            </p>
+                            <p>
+                                Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+                                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                                inceptos himenaeos.
+                            </p>
+                        </div>
+                    </div><br>
+                    <div class="ui-widget">
+                        <label for="tags">Tags: </label>
+                        <input id="tags">
+                    </div><br>
+                    <div class="widget">
+                        <h1>Widget Buttons</h1>
+                        <button>A button element</button>
+
+                        <input type="submit" value="A submit button">
+
+                        <a href="#">An anchor</a>
+                    </div>
+                    <h1>CSS Buttons</h1>
+                    <button class="ui-button ui-widget ui-corner-all">A button element</button>
+
+                    <input class="ui-button ui-widget ui-corner-all" type="submit" value="A submit button">
+
+                    <a class="ui-button ui-widget ui-corner-all" href="#">An anchor</a>
+                    <div class="widget">
+                        <h1>Checkbox and radio button widgets</h1>
+
+                        <h2>Radio Group</h2>
+                        <fieldset>
+                            <legend>Select a Location: </legend>
+                            <label for="radio-1">New York</label>
+                            <input type="radio" name="radio-1" id="radio-1">
+                            <label for="radio-2">Paris</label>
+                            <input type="radio" name="radio-1" id="radio-2">
+                            <label for="radio-3">London</label>
+                            <input type="radio" name="radio-1" id="radio-3">
+                        </fieldset>
+
+                        <h2>Checkbox</h2>
+                        <fieldset>
+                            <legend>Hotel Ratings: </legend>
+                            <label for="checkbox-1">2 Star</label>
+                            <input type="checkbox" name="checkbox-1" id="checkbox-1">
+                            <label for="checkbox-2">3 Star</label>
+                            <input type="checkbox" name="checkbox-2" id="checkbox-2">
+                            <label for="checkbox-3">4 Star</label>
+                            <input type="checkbox" name="checkbox-3" id="checkbox-3">
+                            <label for="checkbox-4">5 Star</label>
+                            <input type="checkbox" name="checkbox-4" id="checkbox-4">
+                        </fieldset>
+
+                        <h2>Checkbox nested in label</h2>
+                        <fieldset>
+                            <legend>Bed Type: </legend>
+                            <label for="checkbox-nested-1">2 Double
+                                <input type="checkbox" name="checkbox-nested-1" id="checkbox-nested-1">
+                            </label>
+                            <label for="checkbox-nested-2">2 Queen
+                                <input type="checkbox" name="checkbox-nested-2" id="checkbox-nested-2">
+                            </label>
+                            <label for="checkbox-nested-3">1 Queen
+                                <input type="checkbox" name="checkbox-nested-3" id="checkbox-nested-3">
+                            </label>
+                            <label for="checkbox-nested-4">1 King
+                                <input type="checkbox" name="checkbox-nested-4" id="checkbox-nested-4">
+                            </label>
+                        </fieldset>
+                    </div><br>
+
+                    <p>Date: <input type="text" id="datepicker"></p>
+
+                    <div id="dialog" title="Basic dialog">
+                        <p>This is the default dialog which is useful for displaying information. The dialog window can
+                            be moved, resized and closed with the 'x' icon.</p>
+                    </div><br>
+                    <ul id="menu">
+                        <li class="ui-state-disabled">
+                            <div>Toys (n/a)</div>
+                        </li>
+                        <li>
+                            <div>Books</div>
+                        </li>
+                        <li>
+                            <div>Clothing</div>
+                        </li>
+                        <li>
+                            <div>Electronics</div>
+                            <ul>
+                                <li class="ui-state-disabled">
+                                    <div>Home Entertainment</div>
+                                </li>
+                                <li>
+                                    <div>Car Hifi</div>
+                                </li>
+                                <li>
+                                    <div>Utilities</div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div>Movies</div>
+                        </li>
+                        <li>
+                            <div>Music</div>
+                            <ul>
+                                <li>
+                                    <div>Rock</div>
+                                    <ul>
+                                        <li>
+                                            <div>Alternative</div>
+                                        </li>
+                                        <li>
+                                            <div>Classic</div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>Jazz</div>
+                                    <ul>
+                                        <li>
+                                            <div>Freejazz</div>
+                                        </li>
+                                        <li>
+                                            <div>Big Band</div>
+                                        </li>
+                                        <li>
+                                            <div>Modern</div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>Pop</div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="ui-state-disabled">
+                            <div>Specials (n/a)</div>
+                        </li>
+                    </ul><br>
+                    <div id="progressbar"></div><br>
+                    <div class="demo">
+
+                        <form action="#">
+
+                            <fieldset>
+                                <label for="speed">Select a speed</label>
+                                <select name="speed" id="speed">
+                                    <option>Slower</option>
+                                    <option>Slow</option>
+                                    <option selected="selected">Medium</option>
+                                    <option>Fast</option>
+                                    <option>Faster</option>
+                                </select>
+
+                                <label for="files">Select a file</label>
+                                <select name="files" id="files">
+                                    <optgroup label="Scripts">
+                                        <option value="jquery">jQuery.js</option>
+                                        <option value="jqueryui">ui.jQuery.js</option>
+                                    </optgroup>
+                                    <optgroup label="Other files">
+                                        <option value="somefile">Some unknown file</option>
+                                        <option value="someotherfile">Some other file with a very long option text
+                                        </option>
+                                    </optgroup>
+                                </select>
+
+                                <label for="number">Select a number</label>
+                                <select name="number" id="number">
+                                    <option>1</option>
+                                    <option selected="selected">2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                    <option>13</option>
+                                    <option>14</option>
+                                    <option>15</option>
+                                    <option>16</option>
+                                    <option>17</option>
+                                    <option>18</option>
+                                    <option>19</option>
+                                </select>
+
+                                <label for="salutation">Select a title</label>
+                                <select name="salutation" id="salutation">
+                                    <option disabled="" selected="">Please pick one</option>
+                                    <option>Mr.</option>
+                                    <option>Mrs.</option>
+                                    <option>Dr.</option>
+                                    <option>Prof.</option>
+                                    <option>Other</option>
+                                </select>
+                            </fieldset>
+
+                        </form>
+
+                    </div>
+                    <div id="slider"></div>
+                    <p>
+                        <label for="spinner">Select a value:</label>
+                        <input id="spinner" name="value">
+                    </p>
+
+                    <p>
+                        <button id="disable">Toggle disable/enable</button>
+                        <button id="destroy">Toggle widget</button>
+                    </p>
+
+                    <p>
+                        <button id="getvalue">Get value</button>
+                        <button id="setvalue">Set value to 5</button>
+                    </p><br>
+                    <div id="tabs">
+                        <ul>
+                            <li><a href="#tabs-1">Nunc tincidunt</a></li>
+                            <li><a href="#tabs-2">Proin dolor</a></li>
+                            <li><a href="#tabs-3">Aenean lacinia</a></li>
+                        </ul>
+                        <div id="tabs-1">
+                            <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu.
+                                Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam
+                                aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper
+                                leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales
+                                tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede
+                                varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc
+                                tristique tempus lectus.</p>
+                        </div>
+                        <div id="tabs-2">
+                            <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra
+                                massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus
+                                malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet
+                                fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros
+                                vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc.
+                                Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque
+                                convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod
+                                felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+                        </div>
+                        <div id="tabs-3">
+                            <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede
+                                vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum
+                                non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                                inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque.
+                                Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec,
+                                feugiat nec, luctus a, lacus.</p>
+                            <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac
+                                lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing
+                                velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula
+                                faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed
+                                nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac,
+                                tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo.
+                                Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit
+                                hendrerit.</p>
+                        </div>
+                    </div>
+                    <p><a href="#" title="That's what this widget is">Tooltips</a> can be attached to any element. When
+                        you hover
+                        the element with your mouse, the title attribute is displayed in a little box next to the
+                        element, just like a native tooltip.</p>
+                    <p>But as it's not a native tooltip, it can be styled. Any themes built with
+                        <a href="https://jqueryui.com/themeroller/"
+                            title="ThemeRoller: jQuery UI's theme builder application">ThemeRoller</a>
+                        will also style tooltips accordingly.
+                    </p>
+                    <p>Tooltips are also useful for form elements, to show some additional information in the context of
+                        each field.</p>
+                    <p><label for="age">Your age:</label><input id="age"
+                            title="We ask for your age only for statistical purposes."></p>
+                    <p>Hover the field to see the tooltip.</p>
+                </div>
             </main>
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
@@ -276,6 +704,7 @@
     <script src="../js/simple-datatables.min.js" crossorigin="anonymous"></script>
     <script src="../js/datatables-simple-demo.js"></script>
     <script src="../js/custom.js"></script>
+
 </body>
 
 </html>
