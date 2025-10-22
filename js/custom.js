@@ -1,3 +1,7 @@
+function showAlert() {
+    alert("You clicked this");
+}
+
 function showAlertYesNo() {
     let userResponse = confirm("Do you want to proceed?");
     if (userResponse) {
