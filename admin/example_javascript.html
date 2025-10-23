@@ -12,86 +12,10 @@
     <link href="../css/styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/bootstrap-icons.css">
     <script src="../js/all.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
-    <script>
-        $(function () {
-            $("#accordion").accordion();
-        });
-    </script>
-    <script>
-        $(function () {
-            var availableTags = [
-                "ActionScript",
-                "AppleScript",
-                "Asp",
-                "BASIC",
-                "C",
-                "C++",
-                "Clojure",
-                "COBOL",
-                "ColdFusion",
-                "Erlang",
-                "Fortran",
-                "Groovy",
-                "Haskell",
-                "Java",
-                "JavaScript",
-                "Lisp",
-                "Perl",
-                "PHP",
-                "Python",
-                "Ruby",
-                "Scala",
-                "Scheme"
-            ];
-            $("#tags").autocomplete({
-                source: availableTags
-            });
-        });
-    </script>
-    <script>
-        $(function () {
-            $(".widget input[type=submit], .widget a, .widget button").button();
-            $("button, input, a").on("click", function (event) {
-                event.preventDefault();
-            });
-        });
-    </script>
-    <script>
-        $(function () {
-            $("input").checkboxradio();
-        });
-    </script>
-    <script>
-        $(function () {
-            $("#datepicker").datepicker();
-        });
-    </script>
-    <script>
-        $(function () {
-            $("#dialog").dialog();
-        });
-    </script>
-    <script>
-        $(function () {
-            $("#menu").menu();
-        });
-    </script>
-    <style>
-        .ui-menu {
-            width: 150px;
-        }
-    </style>
-    <script>
-        $(function () {
-            $("#progressbar").progressbar({
-                value: 37
-            });
-        });
-    </script>
+    <!--<link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">-->
+    <link rel="stylesheet" href="../js/jquery-ui-1.14.1.custom/jquery-ui-1.14.1.custom/jquery-ui.css">
+    <!--!<link rel="stylesheet" href="/resources/demos/style.css">-->
+
     <style>
         fieldset {
             border: 0;
@@ -106,72 +30,19 @@
             height: 200px;
         }
     </style>
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
-    <script>
-        $(function () {
-            $("#speed").selectmenu();
 
-            $("#files").selectmenu();
-
-            $("#number")
-                .selectmenu()
-                .selectmenu("menuWidget")
-                .addClass("overflow");
-
-            $("#salutation").selectmenu();
-        });
-    </script>
-    <script>
-        $(function () {
-            $("#slider").slider();
-        });
-    </script>
-    <script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"></script>
-    <script>
-        $(function () {
-            var spinner = $("#spinner").spinner();
-
-            $("#disable").on("click", function () {
-                if (spinner.spinner("option", "disabled")) {
-                    spinner.spinner("enable");
-                } else {
-                    spinner.spinner("disable");
-                }
-            });
-            $("#destroy").on("click", function () {
-                if (spinner.spinner("instance")) {
-                    spinner.spinner("destroy");
-                } else {
-                    spinner.spinner();
-                }
-            });
-            $("#getvalue").on("click", function () {
-                alert(spinner.spinner("value"));
-            });
-            $("#setvalue").on("click", function () {
-                spinner.spinner("value", 5);
-            });
-
-            $("button").button();
-        });
-    </script>
-    <script>
-        $(function () {
-            $("#tabs").tabs();
-        });
-    </script>
-    <script>
-        $(function () {
-            $(document).tooltip();
-        });
-    </script>
+    <style>
+        .ui-menu {
+            width: 150px;
+        }
+    </style>
     <style>
         label {
             display: inline-block;
             width: 5em;
         }
     </style>
+
     <style>
         :root {
             --apple-green: #4CAF50;
@@ -323,7 +194,6 @@
                         <li class="breadcrumb-item active"><i class="fas fa-tachometer-alt"></i>Dashboard / Overview
                         </li>
                     </ol>
-
                     <button class="btn btn-success" onclick="showAlert();">Click me to alert</button>
                     <button class="btn btn-success" onclick="showAlertYesNo();">Click me to alert</button>
 
@@ -663,6 +533,7 @@
                     <p><label for="age">Your age:</label><input id="age"
                             title="We ask for your age only for statistical purposes."></p>
                     <p>Hover the field to see the tooltip.</p>
+
                 </div>
             </main>
             <footer class="py-4 bg-light mt-auto">
@@ -698,12 +569,149 @@
         </div>
     </div>
 
+    <script>
+        $(function () {
+            $("#accordion").accordion();
+        });
+    </script>
+    <script>
+        $(function () {
+            var availableTags = [
+                "ActionScript",
+                "AppleScript",
+                "Asp",
+                "BASIC",
+                "C",
+                "C++",
+                "Clojure",
+                "COBOL",
+                "ColdFusion",
+                "Erlang",
+                "Fortran",
+                "Groovy",
+                "Haskell",
+                "Java",
+                "JavaScript",
+                "Lisp",
+                "Perl",
+                "PHP",
+                "Python",
+                "Ruby",
+                "Scala",
+                "Scheme"
+            ];
+            $("#tags").autocomplete({
+                source: availableTags
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            $(".widget input[type=submit], .widget a, .widget button").button();
+            $("button, input, a").on("click", function (event) {
+                event.preventDefault();
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            $("input").checkboxradio();
+        });
+    </script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
+    <script>
+        $(function () {
+            $("#dialog").dialog();
+        });
+    </script>
+    <script>
+        $(function () {
+            $("#menu").menu();
+        });
+    </script>
+
+    <script>
+        $(function () {
+            $("#progressbar").progressbar({
+                value: 37
+            });
+        });
+    </script>
+
+    <script>
+        $(function () {
+            $("#speed").selectmenu();
+
+            $("#files").selectmenu();
+
+            $("#number")
+                .selectmenu()
+                .selectmenu("menuWidget")
+                .addClass("overflow");
+
+            $("#salutation").selectmenu();
+        });
+    </script>
+    <script>
+        $(function () {
+            $("#slider").slider();
+        });
+    </script>
+    <!--<script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"></script>-->
+    <script>
+        $(function () {
+            var spinner = $("#spinner").spinner();
+
+            $("#disable").on("click", function () {
+                if (spinner.spinner("option", "disabled")) {
+                    spinner.spinner("enable");
+                } else {
+                    spinner.spinner("disable");
+                }
+            });
+            $("#destroy").on("click", function () {
+                if (spinner.spinner("instance")) {
+                    spinner.spinner("destroy");
+                } else {
+                    spinner.spinner();
+                }
+            });
+            $("#getvalue").on("click", function () {
+                alert(spinner.spinner("value"));
+            });
+            $("#setvalue").on("click", function () {
+                spinner.spinner("value", 5);
+            });
+
+            $("button").button();
+        });
+    </script>
+    <script>
+        $(function () {
+            $("#tabs").tabs();
+        });
+    </script>
+    <script>
+        $(function () {
+            $(document).tooltip();
+        });
+    </script>
+
     <script src="../assets/demo/chart-area-demo.js"></script>
     <script src="../js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="../js/scripts.js"></script>
     <script src="../js/simple-datatables.min.js" crossorigin="anonymous"></script>
     <script src="../js/datatables-simple-demo.js"></script>
     <script src="../js/custom.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>-->
+    <script src="../js/jquery-ui-1.14.1.custom/jquery-ui-1.14.1.custom/external/jquery/jquery.js"></script>
+    <script src="../js/jquery-ui-1.14.1.custom/jquery-ui-1.14.1.custom/jquery-ui.js"></script>
+
 
 </body>
 
