@@ -18,6 +18,20 @@
     <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
 
     <style>
+        fieldset {
+            border: 0;
+        }
+
+        label {
+            display: block;
+            margin: 30px 0 0 0;
+        }
+
+        .overflow {
+            height: 200px;
+        }
+    </style>
+    <style>
         label {
             display: inline-block;
             width: 5em;
@@ -625,22 +639,7 @@
             });
         });
     </script>
-    <style>
-        fieldset {
-            border: 0;
-        }
 
-        label {
-            display: block;
-            margin: 30px 0 0 0;
-        }
-
-        .overflow {
-            height: 200px;
-        }
-    </style>
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
     <script>
         $(function () {
             $("#speed").selectmenu();
@@ -660,7 +659,7 @@
             $("#slider").slider();
         });
     </script>
-    <script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"></script>
+    <!--<script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"></script>-->
     <script>
         $(function () {
             var spinner = $("#spinner").spinner();
