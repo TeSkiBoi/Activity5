@@ -192,210 +192,279 @@
                         </li>
                     </ol>
 
-                    <button class="btn btn-success" onclick="showAlert();">Click me to alert</button>
-                    <button class="btn btn-success" onclick="showAlertYesNo();">Click me to alert</button>
 
-                    <div class="row">
-                        <div class="col-3">
-                            <form onsubmit="computeSum ();">
-                                <h1>THIS IS COMPUTATION OF 2 NUMBERS</h1><br>
-                                <input type="text" name="" id="number1" class="form-control"
-                                    placeholder="Enter first number" required><br>
-                                <input type="text" nam="" id="number2" class="form-control"
-                                    placeholder="Enter second number" required><br>
-                                <input type="submit" class="btn btn-primary">
-                            </form>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            Buttons
+                        </div>
+                        <div class="card-body">
+                            <button class="btn btn-success" onclick="showAlert();">Click me to alert</button>
+                            <button class="btn btn-success" onclick="showAlertYesNo();">Click me to alert</button>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h1>THIS IS COMPUTATION OF 2 NUMBERS</h1><br>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3">
+                                    <form onsubmit="computeSum ();">
+
+                                        <input type="text" name="" id="number1" class="form-control"
+                                            placeholder="Enter first number" required><br>
+                                        <input type="text" nam="" id="number2" class="form-control"
+                                            placeholder="Enter second number" required><br>
+                                        <input type="submit" class="btn btn-primary">
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-3">
-                            <h1>JQUERY</h1>
-                            <label for="tags" class="form-label">Programming Languages</label>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            Accordion
                         </div>
-                    </div><br>
-                    <div id="accordion">
-                        <h3>Section 1</h3>
-                        <div>
-                            <p>
-                                Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
-                                ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
-                                amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
-                                odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-                            </p>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3">
+                                    <h1>JQUERY</h1>
+                                    <label for="tags" class="form-label">Programming Languages</label>
+                                </div>
+                            </div><br>
+                            <div id="accordion">
+                                <h3>Section 1</h3>
+                                <div>
+                                    <p>
+                                        Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                                        ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                                        amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo
+                                        ut
+                                        odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque
+                                        vulputate.
+                                    </p>
+                                </div>
+                                <h3>Section 2</h3>
+                                <div>
+                                    <p>
+                                        Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                                        purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis
+                                        porttitor
+                                        velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                                        suscipit faucibus urna.
+                                    </p>
+                                </div>
+                                <h3>Section 3</h3>
+                                <div>
+                                    <p>
+                                        Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque
+                                        lobortis.
+                                        Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac
+                                        libero
+                                        ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+                                        lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis
+                                        dui.
+                                    </p>
+                                    <ul>
+                                        <li>List item one</li>
+                                        <li>List item two</li>
+                                        <li>List item three</li>
+                                    </ul>
+                                </div>
+                                <h3>Section 4</h3>
+                                <div>
+                                    <p>
+                                        Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                                        et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                                        faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                                        mauris vel est.
+                                    </p>
+                                    <p>
+                                        Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat
+                                        lectus.
+                                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                                        inceptos himenaeos.
+                                    </p>
+                                </div>
+                            </div><br>
                         </div>
-                        <h3>Section 2</h3>
-                        <div>
-                            <p>
-                                Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-                                purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-                                velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-                                suscipit faucibus urna.
-                            </p>
-                        </div>
-                        <h3>Section 3</h3>
-                        <div>
-                            <p>
-                                Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-                                Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
-                                ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
-                                lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
-                            </p>
-                            <ul>
-                                <li>List item one</li>
-                                <li>List item two</li>
-                                <li>List item three</li>
-                            </ul>
-                        </div>
-                        <h3>Section 4</h3>
-                        <div>
-                            <p>
-                                Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-                                et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-                                faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-                                mauris vel est.
-                            </p>
-                            <p>
-                                Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-                                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                                inceptos himenaeos.
-                            </p>
-                        </div>
-                    </div><br>
-                    <div class="ui-widget">
-                        <label for="tags">Tags: </label>
-                        <input id="tags">
-                    </div><br>
-                    <div class="widget">
-                        <h1>Widget Buttons</h1>
-                        <button>A button element</button>
-
-                        <input type="submit" value="A submit button">
-
-                        <a href="#">An anchor</a>
                     </div>
-                    <h1>CSS Buttons</h1>
-                    <button class="ui-button ui-widget ui-corner-all">A button element</button>
 
-                    <input class="ui-button ui-widget ui-corner-all" type="submit" value="A submit button">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            Widgets
+                        </div>
+                        <div class="card-body">
+                            <div class="ui-widget">
+                                <label for="tags">Tags: </label>
+                                <input id="tags">
+                            </div><br>
+                            <div class="widget">
+                                <h1>Widget Buttons</h1>
+                                <button>A button element</button>
 
-                    <a class="ui-button ui-widget ui-corner-all" href="#">An anchor</a>
-                    <div class="widget">
-                        <h1>Checkbox and radio button widgets</h1>
+                                <input type="submit" value="A submit button">
 
-                        <h2>Radio Group</h2>
-                        <fieldset>
-                            <legend>Select a Location: </legend>
-                            <label for="radio-1">New York</label>
-                            <input type="radio" name="radio-1" id="radio-1">
-                            <label for="radio-2">Paris</label>
-                            <input type="radio" name="radio-1" id="radio-2">
-                            <label for="radio-3">London</label>
-                            <input type="radio" name="radio-1" id="radio-3">
-                        </fieldset>
+                                <a href="#">An anchor</a>
+                            </div>
 
-                        <h2>Checkbox</h2>
-                        <fieldset>
-                            <legend>Hotel Ratings: </legend>
-                            <label for="checkbox-1">2 Star</label>
-                            <input type="checkbox" name="checkbox-1" id="checkbox-1">
-                            <label for="checkbox-2">3 Star</label>
-                            <input type="checkbox" name="checkbox-2" id="checkbox-2">
-                            <label for="checkbox-3">4 Star</label>
-                            <input type="checkbox" name="checkbox-3" id="checkbox-3">
-                            <label for="checkbox-4">5 Star</label>
-                            <input type="checkbox" name="checkbox-4" id="checkbox-4">
-                        </fieldset>
+                            <h1>CSS Buttons</h1>
+                            <button class="ui-button ui-widget ui-corner-all">A button element</button>
 
-                        <h2>Checkbox nested in label</h2>
-                        <fieldset>
-                            <legend>Bed Type: </legend>
-                            <label for="checkbox-nested-1">2 Double
-                                <input type="checkbox" name="checkbox-nested-1" id="checkbox-nested-1">
-                            </label>
-                            <label for="checkbox-nested-2">2 Queen
-                                <input type="checkbox" name="checkbox-nested-2" id="checkbox-nested-2">
-                            </label>
-                            <label for="checkbox-nested-3">1 Queen
-                                <input type="checkbox" name="checkbox-nested-3" id="checkbox-nested-3">
-                            </label>
-                            <label for="checkbox-nested-4">1 King
-                                <input type="checkbox" name="checkbox-nested-4" id="checkbox-nested-4">
-                            </label>
-                        </fieldset>
-                    </div><br>
+                            <input class="ui-button ui-widget ui-corner-all" type="submit" value="A submit button">
 
-                    <p>Date: <input type="text" id="datepicker"></p>
+                            <a class="ui-button ui-widget ui-corner-all" href="#">An anchor</a>
+                        </div>
+                    </div>
 
-                    <div id="dialog" title="Basic dialog">
-                        <p>This is the default dialog which is useful for displaying information. The dialog window can
-                            be moved, resized and closed with the 'x' icon.</p>
-                    </div><br>
-                    <ul id="menu">
-                        <li class="ui-state-disabled">
-                            <div>Toys (n/a)</div>
-                        </li>
-                        <li>
-                            <div>Books</div>
-                        </li>
-                        <li>
-                            <div>Clothing</div>
-                        </li>
-                        <li>
-                            <div>Electronics</div>
-                            <ul>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            Checkboxradio
+                        </div>
+                        <div class="card-body">
+                            <div class="widget">
+                                <h1>Checkbox and radio button widgets</h1>
+
+                                <h2>Radio Group</h2>
+                                <fieldset>
+                                    <legend>Select a Location: </legend>
+                                    <label for="radio-1">New York</label>
+                                    <input type="radio" name="radio-1" id="radio-1">
+                                    <label for="radio-2">Paris</label>
+                                    <input type="radio" name="radio-1" id="radio-2">
+                                    <label for="radio-3">London</label>
+                                    <input type="radio" name="radio-1" id="radio-3">
+                                </fieldset>
+
+                                <h2>Checkbox</h2>
+                                <fieldset>
+                                    <legend>Hotel Ratings: </legend>
+                                    <label for="checkbox-1">2 Star</label>
+                                    <input type="checkbox" name="checkbox-1" id="checkbox-1">
+                                    <label for="checkbox-2">3 Star</label>
+                                    <input type="checkbox" name="checkbox-2" id="checkbox-2">
+                                    <label for="checkbox-3">4 Star</label>
+                                    <input type="checkbox" name="checkbox-3" id="checkbox-3">
+                                    <label for="checkbox-4">5 Star</label>
+                                    <input type="checkbox" name="checkbox-4" id="checkbox-4">
+                                </fieldset>
+
+                                <h2>Checkbox nested in label</h2>
+                                <fieldset>
+                                    <legend>Bed Type: </legend>
+                                    <label for="checkbox-nested-1">2 Double
+                                        <input type="checkbox" name="checkbox-nested-1" id="checkbox-nested-1">
+                                    </label>
+                                    <label for="checkbox-nested-2">2 Queen
+                                        <input type="checkbox" name="checkbox-nested-2" id="checkbox-nested-2">
+                                    </label>
+                                    <label for="checkbox-nested-3">1 Queen
+                                        <input type="checkbox" name="checkbox-nested-3" id="checkbox-nested-3">
+                                    </label>
+                                    <label for="checkbox-nested-4">1 King
+                                        <input type="checkbox" name="checkbox-nested-4" id="checkbox-nested-4">
+                                    </label>
+                                </fieldset>
+                            </div><br>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            Datepicker
+                        </div>
+                        <div class="card-body">
+                            <p>Date: <input type="text" id="datepicker"></p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            Menu
+                        </div>
+                        <div class="card-body">
+                            <div id="dialog" title="Basic dialog">
+                                <p>This is the default dialog which is useful for displaying information. The
+                                    dialog
+                                    window can
+                                    be moved, resized and closed with the 'x' icon.</p>
+                            </div><br>
+                            <ul id="menu">
                                 <li class="ui-state-disabled">
-                                    <div>Home Entertainment</div>
+                                    <div>Toys (n/a)</div>
                                 </li>
                                 <li>
-                                    <div>Car Hifi</div>
+                                    <div>Books</div>
                                 </li>
                                 <li>
-                                    <div>Utilities</div>
+                                    <div>Clothing</div>
                                 </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <div>Movies</div>
-                        </li>
-                        <li>
-                            <div>Music</div>
-                            <ul>
                                 <li>
-                                    <div>Rock</div>
+                                    <div>Electronics</div>
                                     <ul>
-                                        <li>
-                                            <div>Alternative</div>
+                                        <li class="ui-state-disabled">
+                                            <div>Home Entertainment</div>
                                         </li>
                                         <li>
-                                            <div>Classic</div>
+                                            <div>Car Hifi</div>
+                                        </li>
+                                        <li>
+                                            <div>Utilities</div>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <div>Jazz</div>
+                                    <div>Movies</div>
+                                </li>
+                                <li>
+                                    <div>Music</div>
                                     <ul>
                                         <li>
-                                            <div>Freejazz</div>
+                                            <div>Rock</div>
+                                            <ul>
+                                                <li>
+                                                    <div>Alternative</div>
+                                                </li>
+                                                <li>
+                                                    <div>Classic</div>
+                                                </li>
+                                            </ul>
                                         </li>
                                         <li>
-                                            <div>Big Band</div>
+                                            <div>Jazz</div>
+                                            <ul>
+                                                <li>
+                                                    <div>Freejazz</div>
+                                                </li>
+                                                <li>
+                                                    <div>Big Band</div>
+                                                </li>
+                                                <li>
+                                                    <div>Modern</div>
+                                                </li>
+                                            </ul>
                                         </li>
                                         <li>
-                                            <div>Modern</div>
+                                            <div>Pop</div>
                                         </li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <div>Pop</div>
+                                <li class="ui-state-disabled">
+                                    <div>Specials (n/a)</div>
                                 </li>
-                            </ul>
-                        </li>
-                        <li class="ui-state-disabled">
-                            <div>Specials (n/a)</div>
-                        </li>
-                    </ul><br>
-                    <div id="progressbar"></div><br>
+                            </ul><br>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            Progress Bar
+                        </div>
+                        <div class="card-body">
+                            <div id="progressbar"></div><br>
+                        </div>
+                    </div>
+
                     <div class="demo">
 
                         <form action="#">
@@ -418,7 +487,8 @@
                                     </optgroup>
                                     <optgroup label="Other files">
                                         <option value="somefile">Some unknown file</option>
-                                        <option value="someotherfile">Some other file with a very long option text
+                                        <option value="someotherfile">Some other file with a very long option
+                                            text
                                         </option>
                                     </optgroup>
                                 </select>
@@ -460,77 +530,161 @@
                         </form>
 
                     </div>
-                    <div id="slider"></div>
-                    <p>
-                        <label for="spinner">Select a value:</label>
-                        <input id="spinner" name="value">
-                    </p>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            Slider
+                        </div>
+                        <div class="card-body">
+                            <div id="slider"></div>
+                        </div>
+                    </div>
 
-                    <p>
-                        <button id="disable">Toggle disable/enable</button>
-                        <button id="destroy">Toggle widget</button>
-                    </p>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            Spinner
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                <label for="spinner">Select a value:</label>
+                                <input id="spinner" name="value">
+                            </p>
 
-                    <p>
-                        <button id="getvalue">Get value</button>
-                        <button id="setvalue">Set value to 5</button>
-                    </p><br>
-                    <div id="tabs">
-                        <ul>
-                            <li><a href="#tabs-1">Nunc tincidunt</a></li>
-                            <li><a href="#tabs-2">Proin dolor</a></li>
-                            <li><a href="#tabs-3">Aenean lacinia</a></li>
-                        </ul>
-                        <div id="tabs-1">
-                            <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu.
-                                Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam
-                                aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper
-                                leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales
-                                tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede
-                                varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc
-                                tristique tempus lectus.</p>
+                            <p>
+                                <button id="disable">Toggle disable/enable</button>
+                                <button id="destroy">Toggle widget</button>
+                            </p>
+
+                            <p>
+                                <button id="getvalue">Get value</button>
+                                <button id="setvalue">Set value to 5</button>
+                            </p><br>
                         </div>
-                        <div id="tabs-2">
-                            <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra
-                                massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus
-                                malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet
-                                fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros
-                                vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc.
-                                Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque
-                                convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod
-                                felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+                    </div>
+
+
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            Tabs
                         </div>
-                        <div id="tabs-3">
-                            <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede
-                                vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum
-                                non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                                inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque.
-                                Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec,
-                                feugiat nec, luctus a, lacus.</p>
-                            <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac
-                                lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing
-                                velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula
-                                faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed
-                                nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac,
-                                tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo.
-                                Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit
-                                hendrerit.</p>
+                        <div class="card-body">
+                            <div id="tabs">
+                                <ul>
+                                    <li><a href="#tabs-1">Nunc tincidunt</a></li>
+                                    <li><a href="#tabs-2">Proin dolor</a></li>
+                                    <li><a href="#tabs-3">Aenean lacinia</a></li>
+                                </ul>
+                                <div id="tabs-1">
+                                    <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus.
+                                        Curabitur nec
+                                        arcu.
+                                        Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper
+                                        ante.
+                                        Etiam
+                                        aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor
+                                        ullamcorper
+                                        leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci.
+                                        Aliquam
+                                        sodales
+                                        tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et
+                                        mauris vel
+                                        pede
+                                        varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus
+                                        ipsum.
+                                        Nunc
+                                        tristique tempus lectus.</p>
+                                </div>
+                                <div id="tabs-2">
+                                    <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante,
+                                        ut
+                                        pharetra
+                                        massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla,
+                                        massa eget
+                                        luctus
+                                        malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor.
+                                        Aenean
+                                        aliquet
+                                        fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam.
+                                        Praesent in
+                                        eros
+                                        vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare
+                                        consequat
+                                        nunc.
+                                        Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat.
+                                        Pellentesque
+                                        convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis
+                                        lorem
+                                        euismod
+                                        felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.
+                                    </p>
+                                </div>
+                                <div id="tabs-3">
+                                    <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam
+                                        vulputate, pede
+                                        vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget
+                                        lorem.
+                                        Vestibulum
+                                        non ante. Class aptent taciti sociosqu ad litora torquent per conubia
+                                        nostra,
+                                        per
+                                        inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo
+                                        pellentesque.
+                                        Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim,
+                                        pretium
+                                        nec,
+                                        feugiat nec, luctus a, lacus.</p>
+                                    <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at,
+                                        magna.
+                                        Nullam ac
+                                        lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent
+                                        blandit
+                                        adipiscing
+                                        velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit,
+                                        magna
+                                        ligula
+                                        faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec
+                                        non
+                                        libero sed
+                                        nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor,
+                                        tempor
+                                        ac,
+                                        tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum.
+                                        Maecenas
+                                        commodo.
+                                        Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus
+                                        hendrerit
+                                        hendrerit.</p>
+                                </div>
+                            </div><br>
                         </div>
-                    </div><br>
-                    <p><a href="#" title="That's what this widget is">Tooltips</a> can be attached to any element. When
-                        you hover
-                        the element with your mouse, the title attribute is displayed in a little box next to the
-                        element, just like a native tooltip.</p>
-                    <p>But as it's not a native tooltip, it can be styled. Any themes built with
-                        <a href="https://jqueryui.com/themeroller/"
-                            title="ThemeRoller: jQuery UI's theme builder application">ThemeRoller</a>
-                        will also style tooltips accordingly.
-                    </p>
-                    <p>Tooltips are also useful for form elements, to show some additional information in the context of
-                        each field.</p>
-                    <p><label for="age">Your age:</label><input id="age"
-                            title="We ask for your age only for statistical purposes."></p>
-                    <p>Hover the field to see the tooltip.</p>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            Tooltips
+                        </div>
+                        <div class="card-body">
+                            <p><a href="#" title="That's what this widget is">Tooltips</a> can be attached to
+                                any
+                                element. When
+                                you hover
+                                the element with your mouse, the title attribute is displayed in a little box
+                                next to
+                                the
+                                element, just like a native tooltip.</p>
+                            <p>But as it's not a native tooltip, it can be styled. Any themes built with
+                                <a href="https://jqueryui.com/themeroller/"
+                                    title="ThemeRoller: jQuery UI's theme builder application">ThemeRoller</a>
+                                will also style tooltips accordingly.
+                            </p>
+                            <p>Tooltips are also useful for form elements, to show some additional information
+                                in the
+                                context of
+                                each field.</p>
+                            <p><label for="age">Your age:</label><input id="age"
+                                    title="We ask for your age only for statistical purposes."></p>
+                            <p>Hover the field to see the tooltip.</p>
+                        </div>
+                    </div>
                 </div>
             </main>
             <footer class="py-4 bg-light mt-auto">
