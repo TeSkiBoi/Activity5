@@ -11,36 +11,18 @@
     <link href="../css/style.min.css" rel="stylesheet" />
     <link href="../css/styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/bootstrap-icons.css">
-    <!--<script src="../js/all.js" crossorigin="anonymous"></script>-->
+    <script src="../js/all.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
 
-    <style>
-        fieldset {
-            border: 0;
-        }
-
-        label {
-            display: block;
-            margin: 30px 0 0 0;
-        }
-
-        .overflow {
-            height: 200px;
-        }
-    </style>
-
-    <style>
-        .ui-menu {
-            width: 150px;
-        }
-    </style>
     <style>
         label {
             display: inline-block;
             width: 5em;
         }
     </style>
-
     <style>
         :root {
             --apple-green: #4CAF50;
@@ -192,6 +174,7 @@
                         <li class="breadcrumb-item active"><i class="fas fa-tachometer-alt"></i>Dashboard / Overview
                         </li>
                     </ol>
+
                     <button class="btn btn-success" onclick="showAlert();">Click me to alert</button>
                     <button class="btn btn-success" onclick="showAlertYesNo();">Click me to alert</button>
 
@@ -199,17 +182,14 @@
                         <div class="col-3">
                             <form onsubmit="computeSum ();">
                                 <h1>THIS IS COMPUTATION OF 2 NUMBERS</h1><br>
-                                <input type="text" name="" id="number1" class="form-control"
-                                    placeholder="Enter the First Number">
-                                <br>
-                                <input type="text" name="" id="number2" class="form-control"
-                                    placeholder="Enter the Second Number">
-                                <br>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <input type="text" name="" id="num1" class="form-control"
+                                    placeholder="Enter first number" required><br>
+                                <input type="text" nam="" id="num2" class="form-control"
+                                    placeholder="Enter second number" required><br>
+                                <input type="submit" class="tn btn-primary">
                             </form>
                         </div>
                     </div>
-
 
                     <div class="row">
                         <div class="col-3">
@@ -265,12 +245,10 @@
                             </p>
                         </div>
                     </div><br>
-
                     <div class="ui-widget">
                         <label for="tags">Tags: </label>
                         <input id="tags">
                     </div><br>
-
                     <div class="widget">
                         <h1>Widget Buttons</h1>
                         <button>A button element</button>
@@ -536,7 +514,6 @@
                     <p><label for="age">Your age:</label><input id="age"
                             title="We ask for your age only for statistical purposes."></p>
                     <p>Hover the field to see the tooltip.</p>
-
                 </div>
             </main>
             <footer class="py-4 bg-light mt-auto">
@@ -571,10 +548,6 @@
             </div>
         </div>
     </div>
-
-    <script src="../js/custom.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>--
 
     <script>
         $(function () {
@@ -640,7 +613,11 @@
             $("#menu").menu();
         });
     </script>
-
+    <style>
+        .ui-menu {
+            width: 150px;
+        }
+    </style>
     <script>
         $(function () {
             $("#progressbar").progressbar({
@@ -648,7 +625,22 @@
             });
         });
     </script>
+    <style>
+        fieldset {
+            border: 0;
+        }
 
+        label {
+            display: block;
+            margin: 30px 0 0 0;
+        }
+
+        .overflow {
+            height: 200px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
     <script>
         $(function () {
             $("#speed").selectmenu();
@@ -668,7 +660,7 @@
             $("#slider").slider();
         });
     </script>
-    <!--<script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"></script>-->
+    <script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"></script>
     <script>
         $(function () {
             var spinner = $("#spinner").spinner();
@@ -708,13 +700,13 @@
         });
     </script>
 
+
     <script src="../assets/demo/chart-area-demo.js"></script>
-    <!--<script src="../js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>-->
+    <script src="../js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="../js/scripts.js"></script>
     <script src="../js/simple-datatables.min.js" crossorigin="anonymous"></script>
     <script src="../js/datatables-simple-demo.js"></script>
-
-
+    <script src="../js/custom.js"></script>
 
 </body>
 
