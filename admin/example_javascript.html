@@ -13,9 +13,8 @@
     <link rel="stylesheet" href="../css/bootstrap-icons.css">
     <script src="../js/all.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <!--<link rel="stylesheet" href="/resources/demos/style.css">-->
+
 
     <style>
         fieldset {
@@ -567,6 +566,9 @@
         </div>
     </div>
 
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
     <script>
         $(function () {
             $("#accordion").accordion();
@@ -605,8 +607,11 @@
     </script>
     <script>
         $(function () {
+            // This targets only elements inside a div with the class "widget"
             $(".widget input[type=submit], .widget a, .widget button").button();
-            $("button, input, a").on("click", function (event) {
+
+            // The selector is now more specific, so it won't affect your calculator
+            $(".widget button, .widget input, .widget a").on("click", function (event) {
                 event.preventDefault();
             });
         });
@@ -643,7 +648,6 @@
             });
         });
     </script>
-
     <script>
         $(function () {
             $("#speed").selectmenu();
@@ -702,7 +706,6 @@
             $(document).tooltip();
         });
     </script>
-
 
     <script src="../assets/demo/chart-area-demo.js"></script>
     <!--<script src="../js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>-->
